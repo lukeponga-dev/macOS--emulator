@@ -146,6 +146,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Ensure full viewport height */
+    min-height: 100vh;
   }
 }
 
@@ -194,4 +196,33 @@
 
 .macos-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile UI improvements */
+@media (max-width: 768px) {
+  .macos-desktop {
+    /* Adjustments for smaller screens */
+    padding-bottom: 70px; /* Make space for a slightly larger dock on mobile */
+  }
+
+  .dock > div {
+    padding: 8px 12px; /* Slightly larger padding for dock on mobile */
+    gap: 6px; /* Adjust gap between dock icons */
+  }
+
+  .dock button > div {
+    width: 50px; /* Slightly larger app icons on mobile */
+    height: 50px;
+    border-radius: 12px;
+  }
+
+  .dock button svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .menu-bar {
+    /* Hide some menu bar items on smaller screens if necessary */
+    /* Example: .menu-bar > div:first-child > span:not(:first-child) { display: none; } */
+  }
 }

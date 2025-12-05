@@ -1,9 +1,7 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useCallback } from "react"
-import type { VirtualMachine } from "../mac-emulator"
+import React, { useState, useCallback, useEffect } from "react"
+import type { VirtualMachine } from "../types/emulator"
 import { MenuBar } from "./menu-bar"
 import { Dock } from "./dock"
 import { MacWindow } from "./mac-window"
@@ -13,6 +11,7 @@ import { NotesApp } from "./apps/notes-app"
 import { TerminalApp } from "./apps/terminal-app"
 import { SettingsApp } from "./apps/settings-app"
 import { SafariApp } from "./apps/safari-app"
+import { GraphicsFramebuffer } from "../emulator/graphics-framebuffer"
 
 interface MacOSDesktopProps {
   machine: VirtualMachine
@@ -54,6 +53,23 @@ export function MacOSDesktop({ machine, onShutdown }: MacOSDesktopProps) {
   const [windows, setWindows] = useState<AppWindow[]>([])
   const [activeWindowId, setActiveWindowId] = useState<string | null>(null)
   const [maxZIndex, setMaxZIndex] = useState(100)
+  const [imageData, setImageData] = useState<Uint8ClampedArray | null>(null); // State for framebuffer image data
+
+  // Placeholder for updating imageData - in a real emulator, this would come from the VM
+  // For now, let's simulate a simple red screen for demonstration
+  useEffect(() => {
+    if (machine.screenWidth && machine.screenHeight) {
+      const size = machine.screenWidth * machine.screenHeight * 4; // R, G, B, A
+      const newImageData = new Uint8ClampedArray(size);
+      for (let i = 0; i < size; i += 4) {
+        newImageData[i] = 255;   // Red
+        newImageData[i + 1] = 0; // Green
+        newImageData[i + 2] = 0; // Blue
+        newImageData[i + 3] = 255; // Alpha
+      }
+      setImageData(newImageData);
+    }
+  }, [machine.screenWidth, machine.screenHeight]);
 
   const openApp = useCallback(
     (app: string) => {
@@ -148,6 +164,17 @@ export function MacOSDesktop({ machine, onShutdown }: MacOSDesktopProps) {
           `,
         }}
       />
+
+      {/* Framebuffer for the emulated display */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        {machine.screenWidth && machine.screenHeight && (
+          <GraphicsFramebuffer
+            width={machine.screenWidth}
+            height={machine.screenHeight}
+            imageData={imageData}
+          />
+        )}
+      </div>
 
       {/* Menu Bar */}
       <MenuBar activeApp={activeApp} machine={machine} onShutdown={onShutdown} />

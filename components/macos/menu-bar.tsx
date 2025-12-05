@@ -43,36 +43,42 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
 
   return (
     <div
-      className="h-6 px-2 flex items-center justify-between text-xs"
+      className="h-6 px-2 flex items-center justify-between text-xs relative z-50"
       style={{
-        backgroundColor: "var(--color-macos-menubar)",
-        backdropFilter: "blur(20px)",
-        color: "var(--color-macos-text)",
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        backdropFilter: "blur(30px) saturate(180%)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+        color: "white",
       }}
     >
       {/* Left Side - Apple Menu & App Menu */}
       <div className="flex items-center gap-3">
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center hover:bg-black/5 px-2 py-0.5 rounded">
+          <DropdownMenuTrigger className="flex items-center hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">
             <Apple className="w-3.5 h-3.5" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
             className="min-w-[200px] text-xs"
-            style={{ backgroundColor: "var(--color-macos-window)" }}
+            style={{
+              backgroundColor: "rgba(29, 29, 29, 0.8)",
+              backdropFilter: "blur(30px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              color: "white",
+            }}
           >
-            <DropdownMenuItem className="text-xs">About This Mac</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">System Settings...</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">App Store...</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">Recent Items</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">Force Quit...</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">Sleep</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">Restart...</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs" onClick={onShutdown}>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">About This Mac</DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">System Settings...</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">App Store...</DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">Recent Items</DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">Force Quit...</DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">Sleep</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">Restart...</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20" onClick={onShutdown}>
               Shut Down...
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -83,56 +89,83 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
         </span>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-black/5 px-2 py-0.5 rounded">File</DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="min-w-[180px] text-xs">
-            <DropdownMenuItem className="text-xs">
-              New Window <span className="ml-auto text-[10px] text-muted-foreground">⌘N</span>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">File</DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            className="min-w-[180px] text-xs"
+            style={{
+              backgroundColor: "rgba(29, 29, 29, 0.8)",
+              backdropFilter: "blur(30px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              color: "white",
+            }}
+          >
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              New Window <span className="ml-auto text-[10px] text-gray-400">⌘N</span>
             </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              New Folder <span className="ml-auto text-[10px] text-muted-foreground">⇧⌘N</span>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              New Folder <span className="ml-auto text-[10px] text-gray-400">⇧⌘N</span>
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">
-              Close Window <span className="ml-auto text-[10px] text-muted-foreground">⌘W</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-
-        <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-black/5 px-2 py-0.5 rounded">Edit</DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="min-w-[180px] text-xs">
-            <DropdownMenuItem className="text-xs">
-              Undo <span className="ml-auto text-[10px] text-muted-foreground">⌘Z</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              Redo <span className="ml-auto text-[10px] text-muted-foreground">⇧⌘Z</span>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">
-              Cut <span className="ml-auto text-[10px] text-muted-foreground">⌘X</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              Copy <span className="ml-auto text-[10px] text-muted-foreground">⌘C</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              Paste <span className="ml-auto text-[10px] text-muted-foreground">⌘V</span>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Close Window <span className="ml-auto text-[10px] text-gray-400">⌘W</span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-black/5 px-2 py-0.5 rounded">View</DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="min-w-[180px] text-xs">
-            <DropdownMenuItem className="text-xs">as Icons</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">as List</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">as Columns</DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">as Gallery</DropdownMenuItem>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">Edit</DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            className="min-w-[180px] text-xs"
+            style={{
+              backgroundColor: "rgba(29, 29, 29, 0.8)",
+              backdropFilter: "blur(30px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              color: "white",
+            }}
+          >
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Undo <span className="ml-auto text-[10px] text-gray-400">⌘Z</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Redo <span className="ml-auto text-[10px] text-gray-400">⇧⌘Z</span>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator className="bg-white/10"/>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Cut <span className="ml-auto text-[10px] text-gray-400">⌘X</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Copy <span className="ml-auto text-[10px] text-gray-400">⌘C</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">
+              Paste <span className="ml-auto text-[10px] text-gray-400">⌘V</span>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <span className="hover:bg-black/5 px-2 py-0.5 rounded cursor-default">Go</span>
-        <span className="hover:bg-black/5 px-2 py-0.5 rounded cursor-default">Window</span>
-        <span className="hover:bg-black/5 px-2 py-0.5 rounded cursor-default">Help</span>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">View</DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            className="min-w-[180px] text-xs"
+            style={{
+              backgroundColor: "rgba(29, 29, 29, 0.8)",
+              backdropFilter: "blur(30px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              color: "white",
+            }}
+          >
+            <DropdownMenuItem className="text-xs hover:bg-white/20">as Icons</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">as List</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">as Columns</DropdownMenuItem>
+            <DropdownMenuItem className="text-xs hover:bg-white/20">as Gallery</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Go</span>
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Window</span>
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Help</span>
       </div>
 
       {/* Right Side - Status Icons */}

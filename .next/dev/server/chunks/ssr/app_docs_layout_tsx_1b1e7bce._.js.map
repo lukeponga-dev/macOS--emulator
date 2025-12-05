@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/macOS--emulator/app/docs/layout.tsx"],"sourcesContent":["interface DocsLayoutProps {\n  children: React.ReactNode;\n}\n\nexport default function DocsLayout({ children }: DocsLayoutProps) {\n  return (\n    <div className=\"w-full h-full\">\n        {children}\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAIe,SAAS,WAAW,EAAE,QAAQ,EAAmB;IAC9D,qBACE,8OAAC;QAAI,WAAU;kBACV;;;;;;AAGT"}}]
-}
