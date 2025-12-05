@@ -666,3 +666,1000 @@ https://nextjs.org/docs/messages/module-not-found
 [01:04:41.956] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [01:04:41.956] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [01:04:41.956] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=631855 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=631855","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764959168207}
+[01:08:13.583] Server  LOG      ✓ Compiled in 357ms
+[01:10:53.126] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs color: rgb(120, 120, 120) color: inherit {"dp":"/docs","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764959539430}
+[01:20:51.053] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:20:51.053] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:20:51.053] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=284362 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=284362","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764960136910}
+[01:28:13.125] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:28:13.125] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:28:13.125] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=151832 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=151832","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764960578476}
+[01:29:26.064] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs color: rgb(120, 120, 120) color: inherit {"dp":"/docs","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764960652452}
+[01:30:02.383] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.409] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.410] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.417] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.567] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.568] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.574] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.585] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.601] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.603] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.607] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.609] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.612] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.616] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.618] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.621] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:02.625] Server  LOG      ✓ Compiled in 723ms
+[01:30:03.304] Browser ERROR   ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:30:20.921] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.923] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.926] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.928] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.935] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.940] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.944] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.948] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.957] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.962] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.968] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.975] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:20.980] Server  LOG      ✓ Compiled in 89ms
+[01:30:21.225] Browser ERROR   ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:30:29.295] Server  ERROR    ⨯ ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:30:32.505] Browser ERROR   {"name":"Error"}
+[01:30:32.506] Browser ERROR   uncaughtError: Error: ./components/sections/feedback-section.tsx:12:1
+Module not found: Can't resolve '@/components/ui/textarea'
+  10 |   CardTitle,
+  11 | } from "@/components/ui/card"
+> 12 | import { Textarea } from "@/components/ui/textarea"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { Badge } from "@/components/ui/badge"
+  14 |
+  15 | export function FeedbackSection() {
+
+Import map: aliased to relative './components/ui/textarea' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/sections/feedback-section.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Client Component Browser]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/sections/feedback-section.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Client Component SSR]
+    ./components/mac-emulator-docs.tsx [Server Component]
+    ./app/docs/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:32:17.954] Server  LOG      ✓ Compiled in 286ms
+[01:32:22.715] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:32:22.715] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/docs","route":"/docs"}
+[01:32:22.716] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs?monospaceUid=274177 color: rgb(120, 120, 120) color: inherit {"dp":"/docs","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/docs?monospaceUid=274177","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764960829023}
+[01:33:09.796] Server  LOG      ✓ Compiled in 236ms
+[01:36:39.681] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:36:39.681] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:36:39.681] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=238053 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=238053","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764961085776}
+[01:38:16.786] Server  LOG      ✓ Compiled in 215ms
+[01:38:30.038] Server  LOG      ✓ Compiled in 384ms
+[01:40:11.119] Server  ERROR    ⨯ ./app/docs/layout.tsx:1:1
+Module not found: Can't resolve '@/components/docs-sidebar'
+> 1 | import { DocsSidebar } from "@/components/docs-sidebar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface DocsLayoutProps {
+  4 |   children: React.ReactNode;
+
+Import map: aliased to relative './components/docs-sidebar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:40:11.120] Server  ERROR    ⨯ ./app/docs/layout.tsx:1:1
+Module not found: Can't resolve '@/components/docs-sidebar'
+> 1 | import { DocsSidebar } from "@/components/docs-sidebar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface DocsLayoutProps {
+  4 |   children: React.ReactNode;
+
+Import map: aliased to relative './components/docs-sidebar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:40:11.215] Server  LOG      ✓ Compiled in 451ms
+[01:40:22.253] Browser ERROR   {"name":"Error"}
+[01:40:22.253] Browser ERROR   uncaughtError: Error: ./app/docs/layout.tsx:1:1
+Module not found: Can't resolve '@/components/docs-sidebar'
+> 1 | import { DocsSidebar } from "@/components/docs-sidebar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface DocsLayoutProps {
+  4 |   children: React.ReactNode;
+
+Import map: aliased to relative './components/docs-sidebar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:41:06.543] Server  LOG      ✓ Compiled in 112ms
+[01:45:58.054] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:45:58.054] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:45:58.054] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=92296 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=92296","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764961643897}
+[01:50:05.950] Server  LOG      ✓ Compiled in 403ms
+[01:50:35.257] Server  LOG      ✓ Compiled in 377ms
+[01:50:54.861] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:54.861] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:50:54.861] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=521641 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=521641","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764961941056}

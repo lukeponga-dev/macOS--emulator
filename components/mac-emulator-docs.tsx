@@ -10,6 +10,7 @@ import { InputSection } from "./sections/input-section"
 import { CompatibilitySection } from "./sections/compatibility-section"
 import { PerformanceSection } from "./sections/performance-section"
 import { RoadmapSection } from "./sections/roadmap-section"
+import { Button } from "./ui/button"
 import { Menu } from "lucide-react"
 
 export type Section =
@@ -24,12 +25,7 @@ export type Section =
 
 export function MacEmulatorDocs() {
   const [activeSection, setActiveSection] = useState<Section>("overview")
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-
-  const handleSectionChange = (section: Section) => {
-    setActiveSection(section)
-    setSidebarOpen(false) // Close sidebar on mobile after selection
-  }
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const renderSection = () => {
     switch (activeSection) {
@@ -56,23 +52,24 @@ export function MacEmulatorDocs() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="md:hidden flex items-center justify-between p-4 border-b dark:border-gray-800">
-        <h1 className="text-lg font-bold">Documentation</h1>
-        <button onClick={() => setSidebarOpen(!sidebarOpen)}>
-          <Menu className="h-6 w-6" />
-        </button>
-      </div>
-      <div className="flex">
-        <Sidebar
-          activeSection={activeSection}
-          onSectionChange={handleSectionChange}
-          isOpen={sidebarOpen}
-          setIsOpen={setSidebarOpen}
-        />
-        <main className="flex-1 md:ml-64 p-4 md:p-8">
-          <div className="max-w-4xl mx-auto">{renderSection()}</div>
-        </main>
-      </div>
+      <Sidebar
+        activeSection={activeSection}
+        onSectionChange={(section) => {
+          setActiveSection(section)
+          setIsSidebarOpen(false)
+        }}
+        isOpen={isSidebarOpen}
+        setIsOpen={setIsSidebarOpen}
+      />
+      <main className="md:ml-64">
+        <div className="flex items-center p-4 border-b border-border md:hidden">
+          <Button variant="outline" size="icon" onClick={() => setIsSidebarOpen(true)}>
+            <Menu className="h-4 w-4" />
+          </Button>
+          <span className="font-semibold text-lg ml-4">MacEmu Docs</span>
+        </div>
+        <div className="max-w-4xl mx-auto px-8 py-12">{renderSection()}</div>
+      </main>
     </div>
   )
 }
