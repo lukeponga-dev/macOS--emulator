@@ -44,11 +44,12 @@ export function Dock({ openApp, windows, onWindowClick }: DockProps) {
     <TooltipProvider delayDuration={0}>
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
         <div
-          className="flex items-end gap-1 px-2 py-1 rounded-2xl"
+          className="flex items-end gap-1 px-3 py-2 rounded-2xl transition-all duration-200 ease-out"
           style={{
-            backgroundColor: "rgba(255, 255, 255, 0.25)",
-            backdropFilter: "blur(20px)",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backdropFilter: "blur(30px) saturate(180%)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
           }}
         >
           {dockApps.map((app, index) => {
@@ -60,9 +61,9 @@ export function Dock({ openApp, windows, onWindowClick }: DockProps) {
               <Tooltip key={app.id}>
                 <TooltipTrigger asChild>
                   <button
-                    className="relative flex flex-col items-center transition-transform duration-150"
+                    className="relative flex flex-col items-center transition-transform duration-200 ease-out p-1 rounded-lg"
                     style={{
-                      transform: isHovered ? "translateY(-8px) scale(1.2)" : "translateY(0) scale(1)",
+                      transform: isHovered ? "translateY(-10px) scale(1.15)" : "translateY(0) scale(1)",
                     }}
                     onMouseEnter={() => setHoveredApp(app.id)}
                     onMouseLeave={() => setHoveredApp(null)}
@@ -76,19 +77,25 @@ export function Dock({ openApp, windows, onWindowClick }: DockProps) {
                     }}
                   >
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-shadow"
+                      className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out"
                       style={{
                         backgroundColor: app.color,
-                        boxShadow: isHovered ? "0 8px 20px rgba(0,0,0,0.3)" : "0 2px 8px rgba(0,0,0,0.2)",
+                        boxShadow: isHovered ? "0 12px 25px rgba(0,0,0,0.4)" : "0 5px 15px rgba(0,0,0,0.2)",
+                        transform: isHovered ? "scale(1.05)" : "scale(1)",
                       }}
                     >
-                      <Icon className="w-7 h-7 text-white" />
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
                     {/* Running indicator */}
-                    {isOpen && <div className="absolute -bottom-1 w-1 h-1 rounded-full bg-white/80" />}
+                    {isOpen && (
+                      <div className="absolute bottom-0 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200" />
+                    )}
                   </button>
                 </TooltipTrigger>
-                <TooltipContent side="top" className="bg-neutral-800 text-white text-xs border-0">
+                <TooltipContent
+                  side="top"
+                  className="bg-neutral-800 text-white text-xs border-0 py-1 px-2 rounded-md shadow-lg"
+                >
                   {app.name}
                 </TooltipContent>
               </Tooltip>

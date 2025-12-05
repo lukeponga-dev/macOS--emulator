@@ -88,6 +88,10 @@ export function MacWindow({
     }
   }, [isDragging, isResizing, dragOffset, resizeStart, onMove, onResize])
 
+  const shadowStyle = isActive
+    ? "0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05)"
+    : "0 8px 20px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.03)"
+
   if (window.maximized) {
     return (
       <div
@@ -97,6 +101,7 @@ export function MacWindow({
           zIndex: window.zIndex,
           backgroundColor: "var(--color-macos-window)",
           borderRadius: 0,
+          boxShadow: shadowStyle,
         }}
         onClick={onFocus}
       >
@@ -126,10 +131,8 @@ export function MacWindow({
         height: window.height,
         zIndex: window.zIndex,
         backgroundColor: "var(--color-macos-window)",
-        borderRadius: "10px",
-        boxShadow: isActive
-          ? "0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0,0,0,0.1)"
-          : "0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1)",
+        borderRadius: "8px",
+        boxShadow: shadowStyle,
         overflow: "hidden",
       }}
       onClick={onFocus}
@@ -144,7 +147,7 @@ export function MacWindow({
       />
       <div className="flex-1 overflow-hidden">{children}</div>
       {/* Resize handle */}
-      <div className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize" onMouseDown={handleResizeStart} />
+      <div className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200" />
     </div>
   )
 }
@@ -159,54 +162,54 @@ interface WindowHeaderProps {
 }
 
 function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMouseDown }: WindowHeaderProps) {
-  const [hoveredControl, setHoveredControl] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const controlButtonClass =
+    "w-3 h-3 rounded-full flex items-center justify-center text-[8px] transition-all duration-100 ease-out"
 
   return (
     <div
       className="h-7 flex items-center px-3 cursor-default select-none shrink-0"
       style={{
-        backgroundColor: isActive ? "#f6f6f6" : "#e8e8e8",
-        borderBottom: "1px solid rgba(0,0,0,0.1)",
+        backgroundColor: isActive ? "#ffffff" : "#f0f0f0",
+        borderBottom: isActive ? "1px solid #e0e0e0" : "1px solid #e8e8e8",
       }}
       onMouseDown={onMouseDown}
     >
       <div
         className="window-controls flex items-center gap-2"
-        onMouseEnter={() => setHoveredControl(true)}
-        onMouseLeave={() => setHoveredControl(false)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <button
-          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
-          style={{ backgroundColor: "var(--color-macos-red)" }}
+          className={`${controlButtonClass} ${isHovered ? "bg-red-500" : "bg-red-400 opacity-50"}`}
           onClick={(e) => {
             e.stopPropagation()
             onClose()
           }}
         >
-          {hoveredControl && <span className="text-red-900 font-bold">×</span>}
+          {isHovered && <span className="text-white font-bold">×</span>}
         </button>
         <button
-          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
-          style={{ backgroundColor: "var(--color-macos-yellow)" }}
+          className={`${controlButtonClass} ${isHovered ? "bg-yellow-500" : "bg-yellow-400 opacity-50"}`}
           onClick={(e) => {
             e.stopPropagation()
             onMinimize()
           }}
         >
-          {hoveredControl && <span className="text-yellow-900 font-bold">−</span>}
+          {isHovered && <span className="text-white font-bold">−</span>}
         </button>
         <button
-          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
-          style={{ backgroundColor: "var(--color-macos-green)" }}
+          className={`${controlButtonClass} ${isHovered ? "bg-green-500" : "bg-green-400 opacity-50"}`}
           onClick={(e) => {
             e.stopPropagation()
             onMaximize()
           }}
         >
-          {hoveredControl && <span className="text-green-900 font-bold">+</span>}
+          {isHovered && <span className="text-white font-bold">+</span>}
         </button>
       </div>
-      <span className="flex-1 text-center text-xs font-medium" style={{ color: "var(--color-macos-text)" }}>
+      <span className="flex-1 text-center text-xs font-medium" style={{ color: isActive ? "#333" : "#666" }}>
         {title}
       </span>
       <div className="w-14" /> {/* Spacer for centering */}

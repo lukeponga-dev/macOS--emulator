@@ -2896,11 +2896,12 @@ function Dock({ openApp, windows, onWindowClick }) {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "absolute bottom-2 left-1/2 -translate-x-1/2",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-end gap-1 px-2 py-1 rounded-2xl",
+                className: "flex items-end gap-1 px-3 py-2 rounded-2xl transition-all duration-200 ease-out",
                 style: {
-                    backgroundColor: "rgba(255, 255, 255, 0.25)",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)"
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    backdropFilter: "blur(30px) saturate(180%)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    boxShadow: "0 8px 30px rgba(0,0,0,0.2)"
                 },
                 children: dockApps.map((app, index)=>{
                     const Icon = app.icon;
@@ -2911,9 +2912,9 @@ function Dock({ openApp, windows, onWindowClick }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipTrigger"], {
                                 asChild: true,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "relative flex flex-col items-center transition-transform duration-150",
+                                    className: "relative flex flex-col items-center transition-transform duration-200 ease-out p-1 rounded-lg",
                                     style: {
-                                        transform: isHovered ? "translateY(-8px) scale(1.2)" : "translateY(0) scale(1)"
+                                        transform: isHovered ? "translateY(-10px) scale(1.15)" : "translateY(0) scale(1)"
                                     },
                                     onMouseEnter: ()=>setHoveredApp(app.id),
                                     onMouseLeave: ()=>setHoveredApp(null),
@@ -2927,54 +2928,55 @@ function Dock({ openApp, windows, onWindowClick }) {
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-shadow",
+                                            className: "w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out",
                                             style: {
                                                 backgroundColor: app.color,
-                                                boxShadow: isHovered ? "0 8px 20px rgba(0,0,0,0.3)" : "0 2px 8px rgba(0,0,0,0.2)"
+                                                boxShadow: isHovered ? "0 12px 25px rgba(0,0,0,0.4)" : "0 5px 15px rgba(0,0,0,0.2)",
+                                                transform: isHovered ? "scale(1.05)" : "scale(1)"
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                                className: "w-7 h-7 text-white"
+                                                className: "w-8 h-8 text-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/macos/dock.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 87,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/dock.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 79,
                                             columnNumber: 21
                                         }, this),
                                         isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute -bottom-1 w-1 h-1 rounded-full bg-white/80"
+                                            className: "absolute bottom-0 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/dock.tsx",
-                                            lineNumber: 88,
-                                            columnNumber: 32
+                                            lineNumber: 91,
+                                            columnNumber: 23
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/macos/dock.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 63,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/dock.tsx",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
                                 side: "top",
-                                className: "bg-neutral-800 text-white text-xs border-0",
+                                className: "bg-neutral-800 text-white text-xs border-0 py-1 px-2 rounded-md shadow-lg",
                                 children: app.name
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/dock.tsx",
-                                lineNumber: 91,
+                                lineNumber: 95,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, app.id, true, {
                         fileName: "[project]/components/macos/dock.tsx",
-                        lineNumber: 60,
+                        lineNumber: 61,
                         columnNumber: 15
                     }, this);
                 })
@@ -3076,6 +3078,7 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
         onMove,
         onResize
     ]);
+    const shadowStyle = isActive ? "0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05)" : "0 8px 20px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.03)";
     if (window.maximized) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             ref: windowRef,
@@ -3083,7 +3086,8 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
             style: {
                 zIndex: window.zIndex,
                 backgroundColor: "var(--color-macos-window)",
-                borderRadius: 0
+                borderRadius: 0,
+                boxShadow: shadowStyle
             },
             onClick: onFocus,
             children: [
@@ -3096,7 +3100,7 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
                     onMouseDown: handleMouseDown
                 }, void 0, false, {
                     fileName: "[project]/components/macos/mac-window.tsx",
-                    lineNumber: 103,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3107,13 +3111,13 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/components/macos/mac-window.tsx",
-                    lineNumber: 111,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/macos/mac-window.tsx",
-            lineNumber: 93,
+            lineNumber: 97,
             columnNumber: 7
         }, this);
     }
@@ -3127,8 +3131,8 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
             height: window.height,
             zIndex: window.zIndex,
             backgroundColor: "var(--color-macos-window)",
-            borderRadius: "10px",
-            boxShadow: isActive ? "0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0,0,0,0.1)" : "0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1)",
+            borderRadius: "8px",
+            boxShadow: shadowStyle,
             overflow: "hidden"
         },
         onClick: onFocus,
@@ -3142,7 +3146,7 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
                 onMouseDown: handleMouseDown
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 137,
+                lineNumber: 140,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3150,134 +3154,125 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
                 children: children
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 145,
+                lineNumber: 148,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-0 right-0 w-4 h-4 cursor-se-resize",
-                onMouseDown: handleResizeStart
+                className: "absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200"
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 147,
+                lineNumber: 150,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/macos/mac-window.tsx",
-        lineNumber: 119,
+        lineNumber: 124,
         columnNumber: 5
     }, this);
 }
 function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMouseDown }) {
-    const [hoveredControl, setHoveredControl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const controlButtonClass = "w-3 h-3 rounded-full flex items-center justify-center text-[8px] transition-all duration-100 ease-out";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "h-7 flex items-center px-3 cursor-default select-none shrink-0",
         style: {
-            backgroundColor: isActive ? "#f6f6f6" : "#e8e8e8",
-            borderBottom: "1px solid rgba(0,0,0,0.1)"
+            backgroundColor: isActive ? "#ffffff" : "#f0f0f0",
+            borderBottom: isActive ? "1px solid #e0e0e0" : "1px solid #e8e8e8"
         },
         onMouseDown: onMouseDown,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "window-controls flex items-center gap-2",
-                onMouseEnter: ()=>setHoveredControl(true),
-                onMouseLeave: ()=>setHoveredControl(false),
+                onMouseEnter: ()=>setIsHovered(true),
+                onMouseLeave: ()=>setIsHovered(false),
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "w-3 h-3 rounded-full flex items-center justify-center text-[8px]",
-                        style: {
-                            backgroundColor: "var(--color-macos-red)"
-                        },
+                        className: `${controlButtonClass} ${isHovered ? "bg-red-500" : "bg-red-400 opacity-50"}`,
                         onClick: (e)=>{
                             e.stopPropagation();
                             onClose();
                         },
-                        children: hoveredControl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-red-900 font-bold",
+                        children: isHovered && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-white font-bold",
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 186,
-                            columnNumber: 30
+                            lineNumber: 191,
+                            columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 178,
+                        lineNumber: 184,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "w-3 h-3 rounded-full flex items-center justify-center text-[8px]",
-                        style: {
-                            backgroundColor: "var(--color-macos-yellow)"
-                        },
+                        className: `${controlButtonClass} ${isHovered ? "bg-yellow-500" : "bg-yellow-400 opacity-50"}`,
                         onClick: (e)=>{
                             e.stopPropagation();
                             onMinimize();
                         },
-                        children: hoveredControl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-yellow-900 font-bold",
+                        children: isHovered && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-white font-bold",
                             children: "−"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 196,
-                            columnNumber: 30
+                            lineNumber: 200,
+                            columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 188,
+                        lineNumber: 193,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "w-3 h-3 rounded-full flex items-center justify-center text-[8px]",
-                        style: {
-                            backgroundColor: "var(--color-macos-green)"
-                        },
+                        className: `${controlButtonClass} ${isHovered ? "bg-green-500" : "bg-green-400 opacity-50"}`,
                         onClick: (e)=>{
                             e.stopPropagation();
                             onMaximize();
                         },
-                        children: hoveredControl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-green-900 font-bold",
+                        children: isHovered && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-white font-bold",
                             children: "+"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 206,
-                            columnNumber: 30
+                            lineNumber: 209,
+                            columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 198,
+                        lineNumber: 202,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 173,
+                lineNumber: 179,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 className: "flex-1 text-center text-xs font-medium",
                 style: {
-                    color: "var(--color-macos-text)"
+                    color: isActive ? "#333" : "#666"
                 },
                 children: title
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 209,
+                lineNumber: 212,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-14"
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 212,
+                lineNumber: 215,
                 columnNumber: 7
             }, this),
             " "
         ]
     }, void 0, true, {
         fileName: "[project]/components/macos/mac-window.tsx",
-        lineNumber: 165,
+        lineNumber: 171,
         columnNumber: 5
     }, this);
 }
@@ -5986,15 +5981,17 @@ function MacOSDesktop({ machine, onShutdown }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex-1 relative overflow-hidden",
         style: {
-            background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
+            background: "linear-gradient(to bottom right, #007AFF, #5AC8FA)"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 opacity-30",
                 style: {
-                    backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                           radial-gradient(circle at 80% 20%, rgba(255, 119, 115, 0.2) 0%, transparent 50%),
-                           radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.2) 0%, transparent 50%)`
+                    backgroundImage: `
+            radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%)
+          `
                 }
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
@@ -6007,7 +6004,7 @@ function MacOSDesktop({ machine, onShutdown }) {
                 onShutdown: onShutdown
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 151,
+                lineNumber: 153,
                 columnNumber: 7
             }, this),
             windows.filter((w)=>!w.minimized).map((window)=>{
@@ -6025,12 +6022,12 @@ function MacOSDesktop({ machine, onShutdown }) {
                         windowId: window.id
                     }, void 0, false, {
                         fileName: "[project]/components/macos/macos-desktop.tsx",
-                        lineNumber: 170,
+                        lineNumber: 172,
                         columnNumber: 32
                     }, this)
                 }, window.id, false, {
                     fileName: "[project]/components/macos/macos-desktop.tsx",
-                    lineNumber: 159,
+                    lineNumber: 161,
                     columnNumber: 13
                 }, this);
             }),
@@ -6049,7 +6046,7 @@ function MacOSDesktop({ machine, onShutdown }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 176,
+                lineNumber: 178,
                 columnNumber: 7
             }, this)
         ]

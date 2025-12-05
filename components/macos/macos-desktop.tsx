@@ -134,16 +134,18 @@ export function MacOSDesktop({ machine, onShutdown }: MacOSDesktopProps) {
     <div
       className="flex-1 relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+        background: "linear-gradient(to bottom right, #007AFF, #5AC8FA)",
       }}
     >
       {/* Desktop Wallpaper Pattern */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                           radial-gradient(circle at 80% 20%, rgba(255, 119, 115, 0.2) 0%, transparent 50%),
-                           radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.2) 0%, transparent 50%)`,
+          backgroundImage: `
+            radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%)
+          `,
         }}
       />
 
