@@ -1,0 +1,10 @@
+[00:00:06.039] Server  LOG      ✓ Ready in 4.4s
+[00:01:01.016] Server  LOG      ○ Compiling / ...
+[00:01:19.415] Server  WARN     ⚠ Cross origin request detected from 9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:03:46.888] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:46.888] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:46.888] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=11354 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=11354","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764969000053}
+[00:05:38.893] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:38.893] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:38.894] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=378451 color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://9000-firebase-mac-emulator-1764954334094.cluster-w5vd22whf5gmav2vgkomwtc4go.cloudworkstations.dev/?monospaceUid=378451","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764969112214}

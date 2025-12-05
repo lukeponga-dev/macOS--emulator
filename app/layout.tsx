@@ -5,9 +5,6 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const geistSans = GeistSans({ subsets: ["latin"], variable: "--font-sans" })
-const geistMono = GeistMono({ subsets: ["latin"], variable: "--font-mono" })
-
 export const metadata: Metadata = {
   title: "MacEmu - Mac Emulator",
   description: "A comprehensive Mac emulator simulation with realistic macOS experience",
@@ -41,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
