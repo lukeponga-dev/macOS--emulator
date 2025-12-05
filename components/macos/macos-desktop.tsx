@@ -1,0 +1,189 @@
+"use client"
+
+import type React from "react"
+
+import { useState, useCallback } from "react"
+import type { VirtualMachine } from "../mac-emulator"
+import { MenuBar } from "./menu-bar"
+import { Dock } from "./dock"
+import { MacWindow } from "./mac-window"
+import { FinderApp } from "./apps/finder-app"
+import { CalculatorApp } from "./apps/calculator-app"
+import { NotesApp } from "./apps/notes-app"
+import { TerminalApp } from "./apps/terminal-app"
+import { SettingsApp } from "./apps/settings-app"
+import { SafariApp } from "./apps/safari-app"
+
+interface MacOSDesktopProps {
+  machine: VirtualMachine
+  onShutdown: () => void
+}
+
+export interface AppWindow {
+  id: string
+  app: string
+  title: string
+  x: number
+  y: number
+  width: number
+  height: number
+  minimized: boolean
+  maximized: boolean
+  zIndex: number
+}
+
+const appComponents: Record<string, React.ComponentType<{ windowId: string }>> = {
+  finder: FinderApp,
+  calculator: CalculatorApp,
+  notes: NotesApp,
+  terminal: TerminalApp,
+  settings: SettingsApp,
+  safari: SafariApp,
+}
+
+const defaultWindowSizes: Record<string, { width: number; height: number }> = {
+  finder: { width: 800, height: 500 },
+  calculator: { width: 240, height: 340 },
+  notes: { width: 600, height: 450 },
+  terminal: { width: 680, height: 420 },
+  settings: { width: 720, height: 500 },
+  safari: { width: 900, height: 600 },
+}
+
+export function MacOSDesktop({ machine, onShutdown }: MacOSDesktopProps) {
+  const [windows, setWindows] = useState<AppWindow[]>([])
+  const [activeWindowId, setActiveWindowId] = useState<string | null>(null)
+  const [maxZIndex, setMaxZIndex] = useState(100)
+
+  const openApp = useCallback(
+    (app: string) => {
+      // Check if app is already open
+      const existingWindow = windows.find((w) => w.app === app && !w.minimized)
+      if (existingWindow) {
+        bringToFront(existingWindow.id)
+        return
+      }
+
+      // Check if minimized
+      const minimizedWindow = windows.find((w) => w.app === app && w.minimized)
+      if (minimizedWindow) {
+        setWindows((prev) => prev.map((w) => (w.id === minimizedWindow.id ? { ...w, minimized: false } : w)))
+        bringToFront(minimizedWindow.id)
+        return
+      }
+
+      const size = defaultWindowSizes[app] || { width: 600, height: 400 }
+      const newWindow: AppWindow = {
+        id: `${app}-${Date.now()}`,
+        app,
+        title: app.charAt(0).toUpperCase() + app.slice(1),
+        x: 100 + ((windows.length * 30) % 200),
+        y: 50 + ((windows.length * 30) % 150),
+        width: size.width,
+        height: size.height,
+        minimized: false,
+        maximized: false,
+        zIndex: maxZIndex + 1,
+      }
+      setMaxZIndex((prev) => prev + 1)
+      setWindows((prev) => [...prev, newWindow])
+      setActiveWindowId(newWindow.id)
+    },
+    [windows, maxZIndex],
+  )
+
+  const closeWindow = useCallback(
+    (id: string) => {
+      setWindows((prev) => prev.filter((w) => w.id !== id))
+      if (activeWindowId === id) {
+        const remaining = windows.filter((w) => w.id !== id)
+        setActiveWindowId(remaining.length > 0 ? remaining[remaining.length - 1].id : null)
+      }
+    },
+    [activeWindowId, windows],
+  )
+
+  const minimizeWindow = useCallback((id: string) => {
+    setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, minimized: true } : w)))
+  }, [])
+
+  const maximizeWindow = useCallback((id: string) => {
+    setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, maximized: !w.maximized } : w)))
+  }, [])
+
+  const bringToFront = useCallback(
+    (id: string) => {
+      setMaxZIndex((prev) => prev + 1)
+      setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, zIndex: maxZIndex + 1 } : w)))
+      setActiveWindowId(id)
+    },
+    [maxZIndex],
+  )
+
+  const updateWindowPosition = useCallback((id: string, x: number, y: number) => {
+    setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, x, y } : w)))
+  }, [])
+
+  const updateWindowSize = useCallback((id: string, width: number, height: number) => {
+    setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, width, height } : w)))
+  }, [])
+
+  const activeApp = activeWindowId ? windows.find((w) => w.id === activeWindowId)?.app : null
+
+  return (
+    <div
+      className="flex-1 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+      }}
+    >
+      {/* Desktop Wallpaper Pattern */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 20%, rgba(255, 119, 115, 0.2) 0%, transparent 50%),
+                           radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.2) 0%, transparent 50%)`,
+        }}
+      />
+
+      {/* Menu Bar */}
+      <MenuBar activeApp={activeApp} machine={machine} onShutdown={onShutdown} />
+
+      {/* Windows */}
+      {windows
+        .filter((w) => !w.minimized)
+        .map((window) => {
+          const AppComponent = appComponents[window.app]
+          return (
+            <MacWindow
+              key={window.id}
+              window={window}
+              isActive={activeWindowId === window.id}
+              onClose={() => closeWindow(window.id)}
+              onMinimize={() => minimizeWindow(window.id)}
+              onMaximize={() => maximizeWindow(window.id)}
+              onFocus={() => bringToFront(window.id)}
+              onMove={(x, y) => updateWindowPosition(window.id, x, y)}
+              onResize={(w, h) => updateWindowSize(window.id, w, h)}
+            >
+              {AppComponent && <AppComponent windowId={window.id} />}
+            </MacWindow>
+          )
+        })}
+
+      {/* Dock */}
+      <Dock
+        openApp={openApp}
+        windows={windows}
+        onWindowClick={(id) => {
+          const win = windows.find((w) => w.id === id)
+          if (win?.minimized) {
+            setWindows((prev) => prev.map((w) => (w.id === id ? { ...w, minimized: false } : w)))
+          }
+          bringToFront(id)
+        }}
+      />
+    </div>
+  )
+}
