@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Play, Trash2, Settings, Monitor, Laptop, Server } from "lucide-react"
+import Link from "next/link"
+import { Plus, Play, Trash2, Settings, Monitor, Laptop, Server, Book } from "lucide-react"
 import type { VirtualMachine } from "../mac-emulator"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -71,115 +72,121 @@ export function MachineManager({ machines, onStartMachine, onCreateMachine, onDe
             <p className="text-muted-foreground mt-1">Manage and run your macOS virtual machines</p>
           </div>
 
-          <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
-            <DialogTrigger asChild>
-              <Button className="gap-2">
-                <Plus className="w-4 h-4" />
-                New Machine
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px]">
-              <DialogHeader>
-                <DialogTitle>Create Virtual Machine</DialogTitle>
-                <DialogDescription>Configure a new macOS virtual machine</DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid gap-2">
-                  <Label htmlFor="name">Machine Name</Label>
-                  <Input
-                    id="name"
-                    value={newMachine.name}
-                    onChange={(e) => setNewMachine((prev) => ({ ...prev, name: e.target.value }))}
-                    placeholder="My Mac"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="grid gap-2">
-                    <Label>Model</Label>
-                    <Select
-                      value={newMachine.model}
-                      onValueChange={(value) => setNewMachine((prev) => ({ ...prev, model: value }))}
-                    >
-                      <SelectTrigger>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value='MacBook Pro 14"'>MacBook Pro 14"</SelectItem>
-                        <SelectItem value='MacBook Pro 16"'>MacBook Pro 16"</SelectItem>
-                        <SelectItem value="MacBook Air">MacBook Air</SelectItem>
-                        <SelectItem value='iMac 24"'>iMac 24"</SelectItem>
-                        <SelectItem value="Mac mini">Mac mini</SelectItem>
-                        <SelectItem value="Mac Studio">Mac Studio</SelectItem>
-                        <SelectItem value="Mac Pro">Mac Pro</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label>macOS Version</Label>
-                    <Select
-                      value={newMachine.osVersion}
-                      onValueChange={(value) => setNewMachine((prev) => ({ ...prev, osVersion: value }))}
-                    >
-                      <SelectTrigger>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="macOS 14.0">macOS 14 Sonoma</SelectItem>
-                        <SelectItem value="macOS 13.0">macOS 13 Ventura</SelectItem>
-                        <SelectItem value="macOS 12.0">macOS 12 Monterey</SelectItem>
-                        <SelectItem value="macOS 11.0">macOS 11 Big Sur</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-                <div className="grid gap-2">
-                  <Label>CPU</Label>
-                  <Select
-                    value={newMachine.cpu}
-                    onValueChange={(value) => setNewMachine((prev) => ({ ...prev, cpu: value }))}
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Apple M3 Pro">Apple M3 Pro</SelectItem>
-                      <SelectItem value="Apple M3 Max">Apple M3 Max</SelectItem>
-                      <SelectItem value="Apple M2 Pro">Apple M2 Pro</SelectItem>
-                      <SelectItem value="Apple M1">Apple M1</SelectItem>
-                      <SelectItem value="Intel Core i7">Intel Core i7</SelectItem>
-                      <SelectItem value="Intel Core i9">Intel Core i9</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="grid gap-2">
-                  <Label>RAM: {newMachine.ram}GB</Label>
-                  <Slider
-                    value={[newMachine.ram]}
-                    onValueChange={([value]) => setNewMachine((prev) => ({ ...prev, ram: value }))}
-                    min={8}
-                    max={128}
-                    step={8}
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label>Storage: {newMachine.storage}GB</Label>
-                  <Slider
-                    value={[newMachine.storage]}
-                    onValueChange={([value]) => setNewMachine((prev) => ({ ...prev, storage: value }))}
-                    min={128}
-                    max={2048}
-                    step={128}
-                  />
-                </div>
-              </div>
-              <DialogFooter>
-                <Button variant="outline" onClick={() => setIsCreateOpen(false)}>
-                  Cancel
+          <div className="flex items-center gap-4">
+            <Link href="/docs" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Book className="w-4 h-4" />
+              Documentation
+            </Link>
+            <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
+              <DialogTrigger asChild>
+                <Button className="gap-2">
+                  <Plus className="w-4 h-4" />
+                  New Machine
                 </Button>
-                <Button onClick={handleCreate}>Create Machine</Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[500px]">
+                <DialogHeader>
+                  <DialogTitle>Create Virtual Machine</DialogTitle>
+                  <DialogDescription>Configure a new macOS virtual machine</DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="grid gap-2">
+                    <Label htmlFor="name">Machine Name</Label>
+                    <Input
+                      id="name"
+                      value={newMachine.name}
+                      onChange={(e) => setNewMachine((prev) => ({ ...prev, name: e.target.value }))}
+                      placeholder="My Mac"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="grid gap-2">
+                      <Label>Model</Label>
+                      <Select
+                        value={newMachine.model}
+                        onValueChange={(value) => setNewMachine((prev) => ({ ...prev, model: value }))}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value='MacBook Pro 14"'>MacBook Pro 14"</SelectItem>
+                          <SelectItem value='MacBook Pro 16"'>MacBook Pro 16"</SelectItem>
+                          <SelectItem value="MacBook Air">MacBook Air</SelectItem>
+                          <SelectItem value='iMac 24"'>iMac 24"</SelectItem>
+                          <SelectItem value="Mac mini">Mac mini</SelectItem>
+                          <SelectItem value="Mac Studio">Mac Studio</SelectItem>
+                          <SelectItem value="Mac Pro">Mac Pro</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="grid gap-2">
+                      <Label>macOS Version</Label>
+                      <Select
+                        value={newMachine.osVersion}
+                        onValueChange={(value) => setNewMachine((prev) => ({ ...prev, osVersion: value }))}
+                      >
+                        <SelectTrigger>
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="macOS 14.0">macOS 14 Sonoma</SelectItem>
+                          <SelectItem value="macOS 13.0">macOS 13 Ventura</SelectItem>
+                          <SelectItem value="macOS 12.0">macOS 12 Monterey</SelectItem>
+                          <SelectItem value="macOS 11.0">macOS 11 Big Sur</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                  <div className="grid gap-2">
+                    <Label>CPU</Label>
+                    <Select
+                      value={newMachine.cpu}
+                      onValueChange={(value) => setNewMachine((prev) => ({ ...prev, cpu: value }))}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="Apple M3 Pro">Apple M3 Pro</SelectItem>
+                        <SelectItem value="Apple M3 Max">Apple M3 Max</SelectItem>
+                        <SelectItem value="Apple M2 Pro">Apple M2 Pro</SelectItem>
+                        <SelectItem value="Apple M1">Apple M1</SelectItem>
+                        <SelectItem value="Intel Core i7">Intel Core i7</SelectItem>
+                        <SelectItem value="Intel Core i9">Intel Core i9</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="grid gap-2">
+                    <Label>RAM: {newMachine.ram}GB</Label>
+                    <Slider
+                      value={[newMachine.ram]}
+                      onValueChange={([value]) => setNewMachine((prev) => ({ ...prev, ram: value }))}
+                      min={8}
+                      max={128}
+                      step={8}
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label>Storage: {newMachine.storage}GB</Label>
+                    <Slider
+                      value={[newMachine.storage]}
+                      onValueChange={([value]) => setNewMachine((prev) => ({ ...prev, storage: value }))}
+                      min={128}
+                      max={2048}
+                      step={128}
+                    />
+                  </div>
+                </div>
+                <DialogFooter>
+                  <Button variant="outline" onClick={() => setIsCreateOpen(false)}>
+                    Cancel
+                  </Button>
+                  <Button onClick={handleCreate}>Create Machine</Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

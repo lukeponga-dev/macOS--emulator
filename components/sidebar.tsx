@@ -1,6 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import { X } from 'lucide-react';
 
 export type Section =
   | "overview"
@@ -15,6 +16,8 @@ export type Section =
 interface SidebarProps {
   activeSection: Section
   onSectionChange: (section: Section) => void
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
 }
 
 const sections: { id: Section; title: string }[] = [
@@ -28,9 +31,21 @@ const sections: { id: Section; title: string }[] = [
   { id: "roadmap", title: "Roadmap" },
 ]
 
-export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
+export function Sidebar({ activeSection, onSectionChange, isOpen, setIsOpen }: SidebarProps) {
   return (
-    <aside className="fixed top-0 left-0 h-full w-64 bg-gray-100 dark:bg-gray-800 p-8">
+    <aside
+      className={cn(
+        "fixed top-0 left-0 h-full w-64 bg-gray-100 dark:bg-gray-800 p-8 z-50 transform transition-transform duration-300 ease-in-out",
+        isOpen ? "translate-x-0" : "-translate-x-full",
+        "md:translate-x-0"
+      )}
+    >
+      <div className="flex justify-between items-center md:hidden mb-4">
+        <h2 className="text-lg font-bold">Menu</h2>
+        <button onClick={() => setIsOpen(false)}>
+          <X className="h-6 w-6" />
+        </button>
+      </div>
       <nav>
         <ul>
           {sections.map((section) => (
