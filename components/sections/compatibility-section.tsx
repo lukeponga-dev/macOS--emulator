@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -93,24 +94,24 @@ export function CompatibilitySection() {
                     <div className="flex items-center gap-2">
                       {app.status === "working" && (
                         <>
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <Badge variant="outline" className="text-green-600 border-green-600">
+                          <CheckCircle className="w-4 h-4 text-success-foreground" />
+                          <Badge variant="success">
                             Working
                           </Badge>
                         </>
                       )}
                       {app.status === "partial" && (
                         <>
-                          <AlertCircle className="w-4 h-4 text-yellow-500" />
-                          <Badge variant="outline" className="text-yellow-600 border-yellow-600">
+                          <AlertCircle className="w-4 h-4 text-warning-foreground" />
+                          <Badge variant="warning">
                             Partial
                           </Badge>
                         </>
                       )}
                       {app.status === "unsupported" && (
                         <>
-                          <XCircle className="w-4 h-4 text-red-500" />
-                          <Badge variant="outline" className="text-red-600 border-red-600">
+                          <XCircle className="w-4 h-4 text-destructive-foreground" />
+                          <Badge variant="destructive">
                             Unsupported
                           </Badge>
                         </>
@@ -132,23 +133,23 @@ export function CompatibilitySection() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>AppKit / UIKit</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>SwiftUI</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Core Data</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Core Graphics</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Core Animation</span>
                   </li>
                 </ul>
@@ -162,23 +163,23 @@ export function CompatibilitySection() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>AVFoundation</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Core Audio</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 text-yellow-500" />
+                    <AlertCircle className="w-4 h-4 text-warning-foreground" />
                     <span>Core ML (partial)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 text-yellow-500" />
+                    <AlertCircle className="w-4 h-4 text-warning-foreground" />
                     <span>Vision (partial)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-500" />
+                    <XCircle className="w-4 h-4 text-destructive-foreground" />
                     <span>Neural Engine (stub)</span>
                   </li>
                 </ul>
@@ -192,19 +193,19 @@ export function CompatibilitySection() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Keychain Services</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Notification Center</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>CloudKit (simulated)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 text-yellow-500" />
+                    <AlertCircle className="w-4 h-4 text-warning-foreground" />
                     <span>iCloud Sync</span>
                   </li>
                 </ul>
@@ -218,19 +219,19 @@ export function CompatibilitySection() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>App Sandbox</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <CheckCircle className="w-4 h-4 text-success-foreground" />
                     <span>Gatekeeper</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 text-yellow-500" />
+                    <AlertCircle className="w-4 h-4 text-warning-foreground" />
                     <span>System Integrity Protection</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-500" />
+                    <XCircle className="w-4 h-4 text-destructive-foreground" />
                     <span>Secure Enclave</span>
                   </li>
                 </ul>

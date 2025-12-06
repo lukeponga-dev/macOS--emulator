@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -5,53 +6,61 @@
 
 /* A more modern, clean, and visually appealing color palette */
 :root {
-  --background: oklch(0.98 0.01 240);
+  --background: oklch(0.95 0.01 240); /* soft gray */
   --foreground: oklch(0.05 0.01 240);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.05 0.01 240);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.05 0.01 240);
-  --primary: oklch(0.6 0.2 260);
+  --primary: oklch(0.7 0.15 180); /* teal */
   --primary-foreground: oklch(0.98 0.01 240);
   --secondary: oklch(0.94 0.02 240);
   --secondary-foreground: oklch(0.05 0.01 240);
   --muted: oklch(0.94 0.02 240);
   --muted-foreground: oklch(0.4 0.01 240);
-  --accent: oklch(0.96 0.03 260);
+  --accent: oklch(0.7 0.15 180); /* teal */
   --accent-foreground: oklch(0.05 0.01 240);
-  --destructive: oklch(0.5 0.2 15);
+  --destructive: oklch(0.5 0.2 15); /* red */
   --destructive-foreground: oklch(0.98 0.01 240);
+  --warning: oklch(0.7 0.2 50); /* amber */
+  --warning-foreground: oklch(0.05 0.01 240);
+  --success: oklch(0.7 0.2 120); /* green */
+  --success-foreground: oklch(0.98 0.01 240);
   --border: oklch(0.9 0.02 240);
   --input: oklch(0.9 0.02 240);
-  --ring: oklch(0.6 0.2 260);
+  --ring: oklch(0.7 0.15 180);
   --chart-1: oklch(0.7 0.2 50);
   --chart-2: oklch(0.7 0.2 180);
   --chart-3: oklch(0.7 0.2 280);
   --chart-4: oklch(0.7 0.2 120);
   --chart-5: oklch(0.7 0.2 20);
-  --radius: 0.5rem;
+  --radius: 0.75rem; /* increased border radius for more rounded cards */
 }
 
 .dark {
-  --background: oklch(0.1 0.01 240);
+  --background: oklch(0.2 0.05 250); /* deep navy */
   --foreground: oklch(0.98 0.01 240);
-  --card: oklch(0.15 0.02 240);
+  --card: oklch(0.25 0.05 250);
   --card-foreground: oklch(0.98 0.01 240);
-  --popover: oklch(0.15 0.02 240);
+  --popover: oklch(0.25 0.05 250);
   --popover-foreground: oklch(0.98 0.01 240);
-  --primary: oklch(0.7 0.2 260);
+  --primary: oklch(0.7 0.15 180); /* teal */
   --primary-foreground: oklch(0.05 0.01 240);
   --secondary: oklch(0.2 0.02 240);
   --secondary-foreground: oklch(0.98 0.01 240);
   --muted: oklch(0.2 0.02 240);
   --muted-foreground: oklch(0.6 0.01 240);
-  --accent: oklch(0.25 0.03 260);
+  --accent: oklch(0.7 0.15 180); /* teal */
   --accent-foreground: oklch(0.98 0.01 240);
-  --destructive: oklch(0.6 0.2 15);
+  --destructive: oklch(0.6 0.2 15); /* red */
   --destructive-foreground: oklch(0.98 0.01 240);
-  --border: oklch(0.25 0.02 240);
-  --input: oklch(0.25 0.02 240);
-  --ring: oklch(0.7 0.2 260);
+  --warning: oklch(0.8 0.2 50); /* amber */
+  --warning-foreground: oklch(0.05 0.01 240);
+  --success: oklch(0.7 0.2 120); /* green */
+  --success-foreground: oklch(0.05 0.01 240);
+  --border: oklch(0.3 0.05 250);
+  --input: oklch(0.3 0.05 250);
+  --ring: oklch(0.7 0.15 180);
 }
 
 @theme inline {
@@ -81,9 +90,9 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 2px);
-  --radius-md: var(--radius);
-  --radius-lg: calc(var(--radius) + 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 }
 
 @layer base {
@@ -93,5 +102,8 @@
   body {
     @apply bg-background text-foreground;
     min-height: 100vh;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
   }
 }

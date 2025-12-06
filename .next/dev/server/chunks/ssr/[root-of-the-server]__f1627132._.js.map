@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///home/user/macOS--emulator/app/page.tsx"],"sourcesContent":["\nimport { DashboardGrid } from \"@/components/DashboardGrid\";\n\nexport default function Home() {\n  return (\n    <div className=\"p-8\">\n      <h1 className=\"text-3xl font-bold mb-8\">Dashboard</h1>\n      <DashboardGrid />\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;AAGe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,8OAAC;;;;;;;;;;;AAGP"}}]
+}

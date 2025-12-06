@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import type { VirtualMachine } from "../../types/emulator"
+import type { VirtualMachine } from "@/types/emulator"
 import { GraphicsFramebuffer } from "../emulator/graphics-framebuffer"
 
 interface MacOSInstallerProps {
@@ -14,7 +14,6 @@ export const MacOSInstaller: React.FC<MacOSInstallerProps> = ({ machine }) => {
   const [imageData, setImageData] = useState<Uint8ClampedArray | null>(null);
 
   useEffect(() => {
-    // Simulate installer boot process and progress
     let currentProgress = 0;
     const interval = setInterval(() => {
       currentProgress += 10;
@@ -33,23 +32,27 @@ export const MacOSInstaller: React.FC<MacOSInstallerProps> = ({ machine }) => {
   }, []);
 
   useEffect(() => {
-    // Placeholder for installer graphics
     if (machine.screenWidth && machine.screenHeight) {
       const size = machine.screenWidth * machine.screenHeight * 4;
       const newImageData = new Uint8ClampedArray(size);
-      for (let i = 0; i < size; i += 4) {
-        newImageData[i] = 50;   // Darker blue
-        newImageData[i + 1] = 100; // Blue
-        newImageData[i + 2] = 150; // Blue
-        newImageData[i + 3] = 255; // Alpha
+      // A simple blue gradient background
+      for (let y = 0; y < machine.screenHeight; y++) {
+        for (let x = 0; x < machine.screenWidth; x++) {
+          const i = (y * machine.screenWidth + x) * 4;
+          const blue = Math.floor((y / machine.screenHeight) * 155) + 100;
+          newImageData[i] = 50;
+          newImageData[i + 1] = 100;
+          newImageData[i + 2] = blue;
+          newImageData[i + 3] = 255;
+        }
       }
       setImageData(newImageData);
     }
   }, [machine.screenWidth, machine.screenHeight]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full bg-black text-white relative p-4">
-      <div className="absolute inset-0">
+    <div className="flex items-center justify-center w-full h-full bg-black relative p-4">
+      <div className="absolute inset-0 w-full h-full">
         {machine.screenWidth && machine.screenHeight && (
           <GraphicsFramebuffer
             width={machine.screenWidth}
@@ -58,16 +61,16 @@ export const MacOSInstaller: React.FC<MacOSInstallerProps> = ({ machine }) => {
           />
         )}
       </div>
-      <div className="relative z-10 text-center max-w-md w-full">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">macOS Installer</h1>
-        <p className="text-sm sm:text-lg mb-4 sm:mb-8">{message}</p>
-        <div className="w-full bg-gray-700 rounded-full h-2 sm:h-4 overflow-hidden">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center bg-black/50 p-6 sm:p-8 rounded-lg shadow-2xl max-w-sm w-full">
+        <h1 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white">macOS Installer</h1>
+        <p className="text-xs sm:text-base mb-4 sm:mb-6 text-gray-300">{message}</p>
+        <div className="w-full bg-gray-600 rounded-full h-2 sm:h-3 overflow-hidden">
           <div
-            className="bg-blue-500 h-full transition-all duration-1000 ease-linear"
+            className="bg-blue-400 h-full transition-all duration-1000 ease-linear"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-        <p className="mt-2 text-sm sm:text-base">{progress}%</p>
+        <p className="mt-2 text-xs sm:text-sm text-gray-400">{progress}%</p>
       </div>
     </div>
   );

@@ -93,7 +93,9 @@ This will start the application in development mode, and you can begin interacti
 
 ---
 
-## 6. Phase 3: Hardware Acceleration
+## 6. Project Roadmap
+
+### Phase 3: Hardware Acceleration
 
 **Timeline:** 4-6 months
 **Status:** Planned

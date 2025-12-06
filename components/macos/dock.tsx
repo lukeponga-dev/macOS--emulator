@@ -1,17 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useRef, MouseEvent } from "react"
 import {
-  FolderOpen,
-  Calculator,
-  StickyNote,
-  Terminal,
-  Settings,
-  Globe,
-  Mail,
-  Music,
-  MessageSquare,
-  Calendar,
+  FolderOpen, Calculator, StickyNote, Terminal, Settings, Globe, Mail,
+  Music, MessageSquare, Calendar, Trash2
 } from "lucide-react"
 import type { AppWindow } from "./macos-desktop"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -23,116 +15,86 @@ interface DockProps {
 }
 
 const dockApps = [
-  { id: "finder", name: "Finder", icon: FolderOpen, color: "#3b82f6" },
-  { id: "safari", name: "Safari", icon: Globe, color: "#0ea5e9" },
-  { id: "mail", name: "Mail", icon: Mail, color: "#3b82f6" },
-  { id: "messages", name: "Messages", icon: MessageSquare, color: "#22c55e" },
-  { id: "music", name: "Music", icon: Music, color: "#ec4899" },
-  { id: "calendar", name: "Calendar", icon: Calendar, color: "#ef4444" },
-  { id: "notes", name: "Notes", icon: StickyNote, color: "#eab308" },
-  { id: "calculator", name: "Calculator", icon: Calculator, color: "#6b7280" },
-  { id: "terminal", name: "Terminal", icon: Terminal, color: "#1f2937" },
-  { id: "settings", name: "System Settings", icon: Settings, color: "#6b7280" },
+  { id: "finder", name: "Finder", icon: FolderOpen },
+  { id: "safari", name: "Safari", icon: Globe },
+  { id: "mail", name: "Mail", icon: Mail },
+  { id: "messages", name: "Messages", icon: MessageSquare },
+  { id: "music", name: "Music", icon: Music },
+  { id: "calendar", name: "Calendar", icon: Calendar },
+  { id: "notes", name: "Notes", icon: StickyNote },
+  { id: "calculator", name: "Calculator", icon: Calculator },
+  { id: "terminal", name: "Terminal", icon: Terminal },
+  { id: "settings", name: "System Settings", icon: Settings },
 ]
 
+const DOCK_ICON_SIZE = 48;
+const DOCK_ICON_MARGIN = 8;
+
 export function Dock({ openApp, windows, onWindowClick }: DockProps) {
-  const [hoveredApp, setHoveredApp] = useState<string | null>(null)
-  const [iconSize, setIconSize] = useState(56) // Default large size
+  const dockRef = useRef<HTMLDivElement>(null);
+  const [hoveredX, setHoveredX] = useState<number | null>(null);
 
-  useEffect(() => {
-    const calculateIconSize = () => {
-      const numApps = dockApps.length
-      const maxDockWidth = window.innerWidth * 0.8; // 80% of window width
-      const baseIconSize = 56; // Corresponds to w-14
-      const minIconSize = 40; // Corresponds to w-10
-      
-      let newSize = baseIconSize;
-      if (numApps > 10) {
-        newSize = Math.max(minIconSize, baseIconSize - (numApps - 10) * 2);
-      }
-      
-      // Further constrain if dock exceeds max width
-      const currentTotalWidth = numApps * (newSize + 12); // Assuming gap of 12px (sm:gap-2)
-      if (currentTotalWidth > maxDockWidth) {
-          const scaleFactor = maxDockWidth / currentTotalWidth;
-          newSize = Math.floor(newSize * scaleFactor);
-      }
-
-      setIconSize(Math.max(minIconSize, newSize));
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (dockRef.current) {
+      setHoveredX(e.clientX - dockRef.current.getBoundingClientRect().left);
     }
+  };
 
-    calculateIconSize();
-    window.addEventListener('resize', calculateIconSize);
-    return () => window.removeEventListener('resize', calculateIconSize);
-  }, []);
-
-  const isAppOpen = (appId: string) => windows.some((w) => w.app === appId)
+  const getScale = (iconX: number) => {
+    if (hoveredX === null) return 1;
+    const distance = Math.abs(iconX - hoveredX);
+    const scale = Math.max(0, 1 - distance / (DOCK_ICON_SIZE * 2));
+    return 1 + 1.2 * Math.pow(scale, 2);
+  };
 
   return (
-    <TooltipProvider delayDuration={0}>
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-full px-2 sm:w-auto sm:px-0">
+    <TooltipProvider delayDuration={100}>
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
         <div
-          className="flex items-end gap-1 sm:gap-2 px-3 py-2 rounded-2xl transition-all duration-200 ease-out justify-center"
+          ref={dockRef}
+          className="flex items-end h-[64px] px-2 py-2 rounded-2xl transition-all duration-200 ease-out"
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.1)",
-            backdropFilter: "blur(30px) saturate(180%)",
+            backdropFilter: "blur(20px) saturate(180%)",
             border: "1px solid rgba(255, 255, 255, 0.2)",
-            boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
           }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={() => setHoveredX(null)}
         >
-          {dockApps.map((app, index) => {
-            const Icon = app.icon
-            const isHovered = hoveredApp === app.id
-            const isOpen = isAppOpen(app.id)
+          {dockApps.map((app, i) => {
+            const iconCenterX = i * (DOCK_ICON_SIZE + DOCK_ICON_MARGIN) + (DOCK_ICON_SIZE + DOCK_ICON_MARGIN) / 2;
+            const scale = getScale(iconCenterX);
+            const Icon = app.icon;
+            const isOpen = windows.some((w) => w.app === app.id);
 
             return (
-              <Tooltip key={app.id}>
-                <TooltipTrigger asChild>
-                  <button
-                    className="relative flex flex-col items-center transition-transform duration-200 ease-out p-1 rounded-lg"
-                    style={{
-                      transform: isHovered ? "translateY(-10px) scale(1.15)" : "translateY(0) scale(1)",
-                    }}
-                    onMouseEnter={() => setHoveredApp(app.id)}
-                    onMouseLeave={() => setHoveredApp(null)}
-                    onClick={() => {
-                      const openWindow = windows.find((w) => w.app === app.id)
-                      if (openWindow) {
-                        onWindowClick(openWindow.id)
-                      } else {
-                        openApp(app.id)
-                      }
-                    }}
-                  >
-                    <div
-                      className="rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out"
-                      style={{
-                        width: `${iconSize}px`,
-                        height: `${iconSize}px`,
-                        backgroundColor: app.color,
-                        boxShadow: isHovered ? "0 12px 25px rgba(0,0,0,0.4)" : "0 5px 15px rgba(0,0,0,0.2)",
-                        transform: isHovered ? "scale(1.05)" : "scale(1)",
+              <div key={app.id} className="relative flex flex-col items-center" style={{ margin: `0 ${DOCK_ICON_MARGIN / 2}px` }}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      className="relative flex items-center justify-center transition-transform duration-100 ease-out origin-bottom"
+                      style={{ 
+                        width: DOCK_ICON_SIZE, height: DOCK_ICON_SIZE, 
+                        transform: `scale(${scale})` 
+                      }}
+                      onClick={() => {
+                        const openWindow = windows.find((w) => w.app === app.id);
+                        if (openWindow) onWindowClick(openWindow.id); else openApp(app.id);
                       }}
                     >
-                      <Icon style={{ width: `${iconSize * 0.6}px`, height: `${iconSize * 0.6}px` }} className="text-white" />
-                    </div>
-                    {/* Running indicator */}
-                    {isOpen && (
-                      <div className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200" />
-                    )}
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent
-                  side="top"
-                  className="bg-neutral-800 text-white text-xs border-0 py-1 px-2 rounded-md shadow-lg"
-                >
-                  {app.name}
-                </TooltipContent>
-              </Tooltip>
-            )
+                      <Icon className="w-full h-full text-white drop-shadow-lg" />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="bg-neutral-800/80 text-white text-xs border-0 py-1 px-2 rounded-md">
+                    {app.name}
+                  </TooltipContent>
+                </Tooltip>
+                {isOpen && <div className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-white/80" />}
+              </div>
+            );
           })}
         </div>
       </div>
     </TooltipProvider>
-  )
+  );
 }

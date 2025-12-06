@@ -41,13 +41,10 @@ const MacEmulatorDocs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node
     throw new Error("Attempted to call MacEmulatorDocs() from the server but MacEmulatorDocs is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.");
 }, "[project]/components/mac-emulator-docs.tsx", "MacEmulatorDocs");
 }),
-"[project]/components/mac-emulator-docs.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+"[project]/components/mac-emulator-docs.tsx [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$mac$2d$emulator$2d$docs$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/components/mac-emulator-docs.tsx [app-rsc] (client reference proxy) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$mac$2d$emulator$2d$docs$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__ = __turbopack_context__.i("[project]/components/mac-emulator-docs.tsx [app-rsc] (client reference proxy)");
-;
-__turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$mac$2d$emulator$2d$docs$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__);
 }),
 "[project]/app/docs/page.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
