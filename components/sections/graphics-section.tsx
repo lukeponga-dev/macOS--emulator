@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { GraphicsPipelineDemo } from "@/components/demos/graphics-pipeline-demo"
+import { GraphicsFramebuffer } from "@/components/emulator/graphics-framebuffer"
 
 export function GraphicsSection() {
   return (
@@ -19,7 +19,7 @@ export function GraphicsSection() {
         </p>
       </div>
 
-      <GraphicsPipelineDemo />
+      <GraphicsFramebuffer width={640} height={480} imageData={null} />
 
       <Tabs defaultValue="metal" className="w-full">
         <TabsList className="grid w-full grid-cols-3">

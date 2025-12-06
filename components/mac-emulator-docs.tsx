@@ -51,17 +51,19 @@ export function MacEmulatorDocs() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Sidebar
-        activeSection={activeSection}
-        onSectionChange={(section) => {
-          setActiveSection(section)
-          setIsSidebarOpen(false)
-        }}
-        isOpen={isSidebarOpen}
-        setIsOpen={setIsSidebarOpen}
-      />
-      <main className="md:ml-64">
+    <div className="min-h-screen bg-background flex">
+      <div className={`fixed inset-y-0 left-0 z-30 w-64 bg-background border-r border-border transition-transform duration-300 ease-in-out md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <Sidebar
+          activeSection={activeSection}
+          onSectionChange={(section) => {
+            setActiveSection(section)
+            setIsSidebarOpen(false)
+          }}
+          isOpen={isSidebarOpen}
+          setIsOpen={setIsSidebarOpen}
+        />
+      </div>
+      <main className="flex-1 md:ml-64">
         <div className="flex items-center p-4 border-b border-border md:hidden">
           <Button variant="outline" size="icon" onClick={() => setIsSidebarOpen(true)}>
             <Menu className="h-4 w-4" />

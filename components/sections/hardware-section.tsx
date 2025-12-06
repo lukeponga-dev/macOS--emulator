@@ -1,9 +1,7 @@
-"use client"
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CpuEmulationDemo } from "@/components/demos/cpu-emulation-demo"
+import { MacEmulator } from "@/components/mac-emulator"
 import { Progress } from "@/components/ui/progress"
 
 export function HardwareSection() {
@@ -28,7 +26,7 @@ export function HardwareSection() {
         </TabsList>
 
         <TabsContent value="cpu" className="space-y-6 mt-6">
-          <CpuEmulationDemo />
+          <MacEmulator />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Card>

@@ -30,7 +30,7 @@ export function EmulatorShell({ children, state, activeMachine, onShutdown }: Em
       </header>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-hidden">{children}</div>
+      <div className="flex-1 overflow-auto">{children}</div>
 
       {/* Status Bar */}
       <footer className="flex items-center justify-between px-4 py-1.5 bg-background text-xs text-muted-foreground border-t border-border">
