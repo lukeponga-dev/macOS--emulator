@@ -90,3 +90,18 @@ To get the emulator up and running on your local machine, follow these steps:
 4.  **Open your browser** and navigate to `http://localhost:3000`.
 
 This will start the application in development mode, and you can begin interacting with the emulator.
+
+---
+
+## 6. Phase 3: Hardware Acceleration
+
+**Timeline:** 4-6 months
+**Status:** Planned
+
+This phase focuses on implementing hardware acceleration features to improve the emulator's performance and capabilities.
+
+- **Metal API translation layer:** A translation layer will be developed to convert Metal API calls into a format that can be executed on the host machine's GPU, enabling near-native graphics performance.
+- **GPU passthrough support:** Direct access to the host machine's GPU will be provided for virtual machines, allowing for high-performance graphics rendering and computation.
+- **Audio subsystem:** A virtual audio device will be implemented to enable audio playback and recording within the emulated environment.
+- **USB controller:** A virtual USB controller will be developed to allow for the connection and use of USB devices within the emulator.
+- **Network virtualization:** A virtual network adapter will be created to provide network connectivity to the virtual machines, allowing them to access the internet and other network resources.

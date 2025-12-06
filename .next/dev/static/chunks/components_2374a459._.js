@@ -2465,7 +2465,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$emulator$2f$em
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$emulator$2f$machine$2d$manager$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/emulator/machine-manager.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$macos$2d$desktop$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/macos/macos-desktop.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$boot$2d$sequence$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/macos/boot-sequence.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$macos$2d$installer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/macos/macos-installer.tsx [app-client] (ecmascript)"); // Import MacOSInstaller
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$macos$2d$installer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/macos/macos-installer.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -2549,6 +2549,29 @@ const defaultMachines = [
         jitEnabled: false,
         mmuEnabled: true,
         mmuMode: "flat"
+    },
+    {
+        id: "4",
+        name: "macOS Installer",
+        model: "VirtualMac",
+        osVersion: "macOS 12.0",
+        cpu: "Generic x86",
+        ram: 4,
+        storage: 0,
+        nvmeControllers: [
+            {
+                id: "nvme-4-1",
+                name: "Boot Drive",
+                sizeGb: 64
+            }
+        ],
+        screenWidth: 1024,
+        screenHeight: 768,
+        status: "stopped",
+        bootMedia: "installer",
+        jitEnabled: true,
+        mmuEnabled: true,
+        mmuMode: "paged"
     }
 ];
 function MacEmulator() {
@@ -2584,8 +2607,8 @@ function MacEmulator() {
             status: "stopped",
             storage: 0,
             nvmeControllers: machine.nvmeControllers || [],
-            screenWidth: machine.screenWidth || 1440,
-            screenHeight: machine.screenHeight || 900,
+            screenWidth: machine.screenWidth || 1024,
+            screenHeight: machine.screenHeight || 768,
             bootMedia: machine.bootMedia || "os",
             jitEnabled: machine.jitEnabled ?? true,
             mmuEnabled: machine.mmuEnabled ?? true,
@@ -2611,7 +2634,7 @@ function MacEmulator() {
                 onDeleteMachine: handleDeleteMachine
             }, void 0, false, {
                 fileName: "[project]/components/mac-emulator.tsx",
-                lineNumber: 145,
+                lineNumber: 168,
                 columnNumber: 9
             }, this),
             state === "booting" && activeMachine && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$boot$2d$sequence$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BootSequence"], {
@@ -2619,27 +2642,27 @@ function MacEmulator() {
                 onComplete: handleBootComplete
             }, void 0, false, {
                 fileName: "[project]/components/mac-emulator.tsx",
-                lineNumber: 152,
+                lineNumber: 175,
                 columnNumber: 48
             }, this),
             state === "running" && activeMachine && (activeMachine.bootMedia === "installer" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$macos$2d$installer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MacOSInstaller"], {
                 machine: activeMachine
             }, void 0, false, {
                 fileName: "[project]/components/mac-emulator.tsx",
-                lineNumber: 155,
+                lineNumber: 178,
                 columnNumber: 11
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$macos$2d$desktop$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MacOSDesktop"], {
                 machine: activeMachine,
                 onShutdown: handleShutdown
             }, void 0, false, {
                 fileName: "[project]/components/mac-emulator.tsx",
-                lineNumber: 157,
+                lineNumber: 180,
                 columnNumber: 11
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/components/mac-emulator.tsx",
-        lineNumber: 143,
+        lineNumber: 166,
         columnNumber: 5
     }, this);
 }

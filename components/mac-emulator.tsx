@@ -5,7 +5,7 @@ import { EmulatorShell } from "./emulator/emulator-shell"
 import { MachineManager } from "./emulator/machine-manager"
 import { MacOSDesktop } from "./macos/macos-desktop"
 import { BootSequence } from "./macos/boot-sequence"
-import { MacOSInstaller } from "./macos/macos-installer" // Import MacOSInstaller
+import { MacOSInstaller } from "./macos/macos-installer"
 import { EmulatorState, VirtualMachine, NVMeController, BootMedia } from "../types/emulator"
 
 const defaultMachines: VirtualMachine[] = [
@@ -16,7 +16,7 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 14.0",
     cpu: "Apple M3 Pro",
     ram: 16,
-    storage: 0, // Storage now managed by nvmeControllers
+    storage: 0,
     nvmeControllers: [
       {
         id: "nvme-1-1",
@@ -27,7 +27,7 @@ const defaultMachines: VirtualMachine[] = [
     screenWidth: 1440,
     screenHeight: 900,
     status: "stopped",
-    bootMedia: "os", // Default boot media
+    bootMedia: "os",
     jitEnabled: true,
     mmuEnabled: true,
     mmuMode: "paged",
@@ -39,7 +39,7 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 13.0",
     cpu: "Apple M1",
     ram: 8,
-    storage: 0, // Storage now managed by nvmeControllers
+    storage: 0,
     nvmeControllers: [
       {
         id: "nvme-2-1",
@@ -50,7 +50,7 @@ const defaultMachines: VirtualMachine[] = [
     screenWidth: 1920,
     screenHeight: 1080,
     status: "stopped",
-    bootMedia: "os", // Default boot media
+    bootMedia: "os",
     jitEnabled: true,
     mmuEnabled: true,
     mmuMode: "paged",
@@ -62,7 +62,7 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 12.0",
     cpu: "Intel Core i7",
     ram: 32,
-    storage: 0, // Storage now managed by nvmeControllers
+    storage: 0,
     nvmeControllers: [
       {
         id: "nvme-3-1",
@@ -78,10 +78,33 @@ const defaultMachines: VirtualMachine[] = [
     screenWidth: 1280,
     screenHeight: 800,
     status: "stopped",
-    bootMedia: "installer", // Set this machine to boot from installer
-    jitEnabled: false, // Example: disable JIT for an older machine
+    bootMedia: "installer",
+    jitEnabled: false,
     mmuEnabled: true,
-    mmuMode: "flat", // Example: use flat MMU for an older machine
+    mmuMode: "flat",
+  },
+  {
+    id: "4",
+    name: "macOS Installer",
+    model: "VirtualMac",
+    osVersion: "macOS 12.0",
+    cpu: "Generic x86",
+    ram: 4,
+    storage: 0,
+    nvmeControllers: [
+      {
+        id: "nvme-4-1",
+        name: "Boot Drive",
+        sizeGb: 64,
+      },
+    ],
+    screenWidth: 1024,
+    screenHeight: 768,
+    status: "stopped",
+    bootMedia: "installer",
+    jitEnabled: true,
+    mmuEnabled: true,
+    mmuMode: "paged",
   },
 ]
 
@@ -123,14 +146,14 @@ export function MacEmulator() {
       ...machine,
       id: Date.now().toString(),
       status: "stopped",
-      storage: 0, // Ensure new machines also have storage set to 0 by default
+      storage: 0,
       nvmeControllers: machine.nvmeControllers || [],
-      screenWidth: machine.screenWidth || 1440, // Default to 1440 if not provided
-      screenHeight: machine.screenHeight || 900, // Default to 900 if not provided
-      bootMedia: machine.bootMedia || "os", // Default to "os" if not provided
-      jitEnabled: machine.jitEnabled ?? true, // Default to true if not provided
-      mmuEnabled: machine.mmuEnabled ?? true, // Default to true if not provided
-      mmuMode: machine.mmuMode || "paged", // Default to "paged" if not provided
+      screenWidth: machine.screenWidth || 1024,
+      screenHeight: machine.screenHeight || 768,
+      bootMedia: machine.bootMedia || "os",
+      jitEnabled: machine.jitEnabled ?? true,
+      mmuEnabled: machine.mmuEnabled ?? true,
+      mmuMode: machine.mmuMode || "paged",
     }
     setMachines((prev) => [...prev, newMachine])
   }
