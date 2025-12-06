@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 
 interface CalculatorAppProps {
@@ -40,17 +39,17 @@ export function CalculatorApp({ windowId }: CalculatorAppProps) {
   }
 
   const toggleSign = () => {
-    const value = Number.parseFloat(display)
+    const value = parseFloat(display)
     setDisplay(String(value * -1))
   }
 
   const percentage = () => {
-    const value = Number.parseFloat(display)
+    const value = parseFloat(display)
     setDisplay(String(value / 100))
   }
 
   const performOperation = (nextOperation: string) => {
-    const inputValue = Number.parseFloat(display)
+    const inputValue = parseFloat(display)
 
     if (previousValue === null) {
       setPreviousValue(inputValue)
@@ -59,18 +58,10 @@ export function CalculatorApp({ windowId }: CalculatorAppProps) {
       let result = 0
 
       switch (operation) {
-        case "+":
-          result = currentValue + inputValue
-          break
-        case "-":
-          result = currentValue - inputValue
-          break
-        case "×":
-          result = currentValue * inputValue
-          break
-        case "÷":
-          result = currentValue / inputValue
-          break
+        case "+": result = currentValue + inputValue; break
+        case "-": result = currentValue - inputValue; break
+        case "×": result = currentValue * inputValue; break
+        case "÷": result = currentValue / inputValue; break
       }
 
       setDisplay(String(result))
@@ -83,23 +74,14 @@ export function CalculatorApp({ windowId }: CalculatorAppProps) {
 
   const calculate = () => {
     if (!operation || previousValue === null) return
-
-    const inputValue = Number.parseFloat(display)
+    const inputValue = parseFloat(display)
     let result = 0
 
     switch (operation) {
-      case "+":
-        result = previousValue + inputValue
-        break
-      case "-":
-        result = previousValue - inputValue
-        break
-      case "×":
-        result = previousValue * inputValue
-        break
-      case "÷":
-        result = previousValue / inputValue
-        break
+      case "+": result = previousValue + inputValue; break
+      case "-": result = previousValue - inputValue; break
+      case "×": result = previousValue * inputValue; break
+      case "÷": result = previousValue / inputValue; break
     }
 
     setDisplay(String(result))
@@ -119,86 +101,50 @@ export function CalculatorApp({ windowId }: CalculatorAppProps) {
     className?: string
     wide?: boolean
   }) => (
-    <button
-      className={`h-12 rounded-full text-xl font-light flex items-center justify-center active:opacity-70 transition-opacity ${wide ? "col-span-2" : ""} ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    <div className={`${wide ? "col-span-2" : ""} aspect-w-1 aspect-h-1`}>
+      <button
+        className={`w-full h-full rounded-full text-xl md:text-2xl font-light flex items-center justify-center active:opacity-70 transition-opacity ${className}`}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </div>
   )
 
   return (
-    <div className="h-full flex flex-col bg-black p-2">
+    <div className="h-full flex flex-col bg-black p-2 space-y-2">
       {/* Display */}
       <div className="flex-1 flex items-end justify-end px-4 pb-2">
-        <span className="text-white text-5xl font-light truncate">
-          {display.length > 9 ? Number.parseFloat(display).toExponential(4) : display}
+        <span className="text-white text-5xl md:text-6xl font-light truncate">
+          {display.length > 9 ? parseFloat(display).toExponential(4) : display}
         </span>
       </div>
 
       {/* Buttons Grid */}
       <div className="grid grid-cols-4 gap-2">
-        <Button onClick={clear} className="bg-gray-400 text-black">
-          AC
-        </Button>
-        <Button onClick={toggleSign} className="bg-gray-400 text-black">
-          ±
-        </Button>
-        <Button onClick={percentage} className="bg-gray-400 text-black">
-          %
-        </Button>
-        <Button onClick={() => performOperation("÷")} className="bg-orange-500 text-white">
-          ÷
-        </Button>
+        <Button onClick={clear} className="bg-gray-400 text-black">AC</Button>
+        <Button onClick={toggleSign} className="bg-gray-400 text-black">±</Button>
+        <Button onClick={percentage} className="bg-gray-400 text-black">%</Button>
+        <Button onClick={() => performOperation("÷")} className="bg-orange-500 text-white">÷</Button>
 
-        <Button onClick={() => inputDigit("7")} className="bg-gray-700 text-white">
-          7
-        </Button>
-        <Button onClick={() => inputDigit("8")} className="bg-gray-700 text-white">
-          8
-        </Button>
-        <Button onClick={() => inputDigit("9")} className="bg-gray-700 text-white">
-          9
-        </Button>
-        <Button onClick={() => performOperation("×")} className="bg-orange-500 text-white">
-          ×
-        </Button>
+        <Button onClick={() => inputDigit("7")} className="bg-gray-700 text-white">7</Button>
+        <Button onClick={() => inputDigit("8")} className="bg-gray-700 text-white">8</Button>
+        <Button onClick={() => inputDigit("9")} className="bg-gray-700 text-white">9</Button>
+        <Button onClick={() => performOperation("×")} className="bg-orange-500 text-white">×</Button>
 
-        <Button onClick={() => inputDigit("4")} className="bg-gray-700 text-white">
-          4
-        </Button>
-        <Button onClick={() => inputDigit("5")} className="bg-gray-700 text-white">
-          5
-        </Button>
-        <Button onClick={() => inputDigit("6")} className="bg-gray-700 text-white">
-          6
-        </Button>
-        <Button onClick={() => performOperation("-")} className="bg-orange-500 text-white">
-          −
-        </Button>
+        <Button onClick={() => inputDigit("4")} className="bg-gray-700 text-white">4</Button>
+        <Button onClick={() => inputDigit("5")} className="bg-gray-700 text-white">5</Button>
+        <Button onClick={() => inputDigit("6")} className="bg-gray-700 text-white">6</Button>
+        <Button onClick={() => performOperation("-")} className="bg-orange-500 text-white">−</Button>
 
-        <Button onClick={() => inputDigit("1")} className="bg-gray-700 text-white">
-          1
-        </Button>
-        <Button onClick={() => inputDigit("2")} className="bg-gray-700 text-white">
-          2
-        </Button>
-        <Button onClick={() => inputDigit("3")} className="bg-gray-700 text-white">
-          3
-        </Button>
-        <Button onClick={() => performOperation("+")} className="bg-orange-500 text-white">
-          +
-        </Button>
+        <Button onClick={() => inputDigit("1")} className="bg-gray-700 text-white">1</Button>
+        <Button onClick={() => inputDigit("2")} className="bg-gray-700 text-white">2</Button>
+        <Button onClick={() => inputDigit("3")} className="bg-gray-700 text-white">3</Button>
+        <Button onClick={() => performOperation("+")} className="bg-orange-500 text-white">+</Button>
 
-        <Button onClick={() => inputDigit("0")} className="bg-gray-700 text-white pl-6 justify-start" wide>
-          0
-        </Button>
-        <Button onClick={inputDecimal} className="bg-gray-700 text-white">
-          .
-        </Button>
-        <Button onClick={calculate} className="bg-orange-500 text-white">
-          =
-        </Button>
+        <Button onClick={() => inputDigit("0")} className="bg-gray-700 text-white pl-6 md:pl-8 justify-start" wide>0</Button>
+        <Button onClick={inputDecimal} className="bg-gray-700 text-white">.</Button>
+        <Button onClick={calculate} className="bg-orange-500 text-white">=</Button>
       </div>
     </div>
   )

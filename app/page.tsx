@@ -23,8 +23,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+      <main className="container mx-auto px-4 py-8 p-4 sm:p-6 md:p-8">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center sm:text-left">
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
             Experience macOS on Any Device
           </h2>

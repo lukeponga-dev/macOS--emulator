@@ -1,11 +1,17 @@
-{
+{pkgs}: {
   channel = "stable-24.05";
+
   packages = [
     pkgs.nodejs_20
+    pkgs.tailwindcss
   ];
+
   idx.extensions = [
-    
+    "esbenp.prettier-vscode"
+    "dbaeumer.vscode-eslint"
+    "bradlc.vscode-tailwindcss"
   ];
+
   idx.previews = {
     previews = {
       web = {
@@ -24,3 +30,4 @@
     };
   };
 }
+

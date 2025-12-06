@@ -89,14 +89,25 @@ export function MacOSDesktop({ machine, onShutdown }: MacOSDesktopProps) {
       }
 
       const size = defaultWindowSizes[app] || { width: 600, height: 400 }
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      // Calculate initial position dynamically, ensuring it's within bounds and responsive
+      const initialX = Math.max(10, (screenWidth - size.width) / 2 + ((windows.length * 15) % (screenWidth * 0.2)));
+      const initialY = Math.max(40, (screenHeight - size.height) / 2 + ((windows.length * 15) % (screenHeight * 0.2)));
+
+      // Adjust window size for smaller screens if it's too large
+      const responsiveWidth = Math.min(size.width, screenWidth - 20);
+      const responsiveHeight = Math.min(size.height, screenHeight - 100); // Account for menu bar and dock
+
       const newWindow: AppWindow = {
         id: `${app}-${Date.now()}`,
         app,
         title: app.charAt(0).toUpperCase() + app.slice(1),
-        x: 100 + ((windows.length * 30) % 200),
-        y: 50 + ((windows.length * 30) % 150),
-        width: size.width,
-        height: size.height,
+        x: initialX,
+        y: initialY,
+        width: responsiveWidth,
+        height: responsiveHeight,
         minimized: false,
         maximized: false,
         zIndex: maxZIndex + 1,

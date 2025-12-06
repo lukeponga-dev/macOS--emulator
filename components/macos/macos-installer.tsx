@@ -48,7 +48,7 @@ export const MacOSInstaller: React.FC<MacOSInstallerProps> = ({ machine }) => {
   }, [machine.screenWidth, machine.screenHeight]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full bg-black text-white relative">
+    <div className="flex flex-col items-center justify-center w-full h-full bg-black text-white relative p-4">
       <div className="absolute inset-0">
         {machine.screenWidth && machine.screenHeight && (
           <GraphicsFramebuffer
@@ -58,16 +58,16 @@ export const MacOSInstaller: React.FC<MacOSInstallerProps> = ({ machine }) => {
           />
         )}
       </div>
-      <div className="relative z-10 text-center">
-        <h1 className="text-4xl font-bold mb-4">macOS Installer</h1>
-        <p className="text-lg mb-8">{message}</p>
-        <div className="w-64 bg-gray-700 rounded-full h-4 overflow-hidden">
+      <div className="relative z-10 text-center max-w-md w-full">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">macOS Installer</h1>
+        <p className="text-sm sm:text-lg mb-4 sm:mb-8">{message}</p>
+        <div className="w-full bg-gray-700 rounded-full h-2 sm:h-4 overflow-hidden">
           <div
             className="bg-blue-500 h-full transition-all duration-1000 ease-linear"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-        <p className="mt-2">{progress}%</p>
+        <p className="mt-2 text-sm sm:text-base">{progress}%</p>
       </div>
     </div>
   );

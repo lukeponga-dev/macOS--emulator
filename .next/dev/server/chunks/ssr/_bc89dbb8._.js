@@ -1386,7 +1386,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center gap-3",
+                className: "flex items-center gap-1 sm:gap-2 md:gap-3",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                         children: [
@@ -1520,7 +1520,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-semibold",
+                        className: "font-semibold inline",
                         children: activeApp ? activeApp.charAt(0).toUpperCase() + activeApp.slice(1) : "Finder"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1530,7 +1530,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuTrigger"], {
-                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150",
+                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex",
                                 children: "File"
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1623,7 +1623,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuTrigger"], {
-                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150",
+                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex",
                                 children: "Edit"
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1752,7 +1752,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuTrigger"], {
-                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150",
+                                className: "hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex",
                                 children: "View"
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1814,7 +1814,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150",
+                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline",
                         children: "Go"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1822,7 +1822,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150",
+                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline",
                         children: "Window"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1830,7 +1830,7 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150",
+                        className: "hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline",
                         children: "Help"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
@@ -1844,10 +1844,10 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center gap-3",
+                className: "flex items-center gap-1 sm:gap-2 md:gap-3",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$battery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Battery$3e$__["Battery"], {
-                        className: "w-4 h-4"
+                        className: "w-3.5 h-3.5"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
                         lineNumber: 173,
@@ -1868,13 +1868,14 @@ function MenuBar({ activeApp, machine, onShutdown }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                        className: "w-3.5 h-3.5"
+                        className: "w-3 h-3 md:w-3.5 md:h-3.5 hidden sm:block"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
                         lineNumber: 176,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "hidden md:inline",
                         children: formatDate(currentTime)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/menu-bar.tsx",
@@ -2079,13 +2080,37 @@ const dockApps = [
 ];
 function Dock({ openApp, windows, onWindowClick }) {
     const [hoveredApp, setHoveredApp] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [iconSize, setIconSize] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(56) // Default large size
+    ;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const calculateIconSize = ()=>{
+            const numApps = dockApps.length;
+            const maxDockWidth = window.innerWidth * 0.8; // 80% of window width
+            const baseIconSize = 56; // Corresponds to w-14
+            const minIconSize = 40; // Corresponds to w-10
+            let newSize = baseIconSize;
+            if (numApps > 10) {
+                newSize = Math.max(minIconSize, baseIconSize - (numApps - 10) * 2);
+            }
+            // Further constrain if dock exceeds max width
+            const currentTotalWidth = numApps * (newSize + 12); // Assuming gap of 12px (sm:gap-2)
+            if (currentTotalWidth > maxDockWidth) {
+                const scaleFactor = maxDockWidth / currentTotalWidth;
+                newSize = Math.floor(newSize * scaleFactor);
+            }
+            setIconSize(Math.max(minIconSize, newSize));
+        };
+        calculateIconSize();
+        window.addEventListener('resize', calculateIconSize);
+        return ()=>window.removeEventListener('resize', calculateIconSize);
+    }, []);
     const isAppOpen = (appId)=>windows.some((w)=>w.app === appId);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipProvider"], {
         delayDuration: 0,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "absolute bottom-2 left-1/2 -translate-x-1/2",
+            className: "absolute bottom-2 left-1/2 -translate-x-1/2 w-full px-2 sm:w-auto sm:px-0",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-end gap-1 px-3 py-2 rounded-2xl transition-all duration-200 ease-out",
+                className: "flex items-end gap-1 sm:gap-2 px-3 py-2 rounded-2xl transition-all duration-200 ease-out justify-center",
                 style: {
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
                     backdropFilter: "blur(30px) saturate(180%)",
@@ -2117,40 +2142,46 @@ function Dock({ openApp, windows, onWindowClick }) {
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out",
+                                            className: "rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out",
                                             style: {
+                                                width: `${iconSize}px`,
+                                                height: `${iconSize}px`,
                                                 backgroundColor: app.color,
                                                 boxShadow: isHovered ? "0 12px 25px rgba(0,0,0,0.4)" : "0 5px 15px rgba(0,0,0,0.2)",
                                                 transform: isHovered ? "scale(1.05)" : "scale(1)"
                                             },
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                                className: "w-8 h-8 text-white"
+                                                style: {
+                                                    width: `${iconSize * 0.6}px`,
+                                                    height: `${iconSize * 0.6}px`
+                                                },
+                                                className: "text-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/macos/dock.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 117,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/dock.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 107,
                                             columnNumber: 21
                                         }, this),
                                         isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute bottom-0 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200"
+                                            className: "absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/dock.tsx",
-                                            lineNumber: 91,
+                                            lineNumber: 121,
                                             columnNumber: 23
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/macos/dock.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 91,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/dock.tsx",
-                                lineNumber: 62,
+                                lineNumber: 90,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2159,29 +2190,29 @@ function Dock({ openApp, windows, onWindowClick }) {
                                 children: app.name
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/dock.tsx",
-                                lineNumber: 95,
+                                lineNumber: 125,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, app.id, true, {
                         fileName: "[project]/components/macos/dock.tsx",
-                        lineNumber: 61,
+                        lineNumber: 89,
                         columnNumber: 15
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/components/macos/dock.tsx",
-                lineNumber: 46,
+                lineNumber: 74,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/macos/dock.tsx",
-            lineNumber: 45,
+            lineNumber: 73,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/macos/dock.tsx",
-        lineNumber: 44,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
@@ -2312,7 +2343,7 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ref: windowRef,
-        className: "absolute flex flex-col window-open",
+        className: "absolute flex flex-col window-open inset-x-2 top-8 bottom-20 md:left-auto md:top-auto md:right-auto md:bottom-auto",
         style: {
             left: window.x,
             top: window.y,
@@ -2347,7 +2378,8 @@ function MacWindow({ window, isActive, onClose, onMinimize, onMaximize, onFocus,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200"
+                className: "absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200 md:block hidden",
+                onMouseDown: handleResizeStart
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
                 lineNumber: 150,
@@ -2387,12 +2419,12 @@ function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMous
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 191,
+                            lineNumber: 194,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 184,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2406,12 +2438,12 @@ function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMous
                             children: "−"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 200,
+                            lineNumber: 203,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 193,
+                        lineNumber: 196,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2425,18 +2457,18 @@ function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMous
                             children: "+"
                         }, void 0, false, {
                             fileName: "[project]/components/macos/mac-window.tsx",
-                            lineNumber: 209,
+                            lineNumber: 212,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/macos/mac-window.tsx",
-                        lineNumber: 202,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 179,
+                lineNumber: 182,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2447,21 +2479,21 @@ function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMous
                 children: title
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 212,
+                lineNumber: 215,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-14"
             }, void 0, false, {
                 fileName: "[project]/components/macos/mac-window.tsx",
-                lineNumber: 215,
+                lineNumber: 218,
                 columnNumber: 7
             }, this),
             " "
         ]
     }, void 0, true, {
         fileName: "[project]/components/macos/mac-window.tsx",
-        lineNumber: 171,
+        lineNumber: 174,
         columnNumber: 5
     }, this);
 }
@@ -2631,58 +2663,71 @@ function FinderApp({ windowId }) {
     const [viewMode, setViewMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("list");
     const [currentPath, setCurrentPath] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("Home");
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex h-full",
+        className: "flex flex-col md:flex-row h-full",
         style: {
             color: "var(--color-macos-text)"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-44 shrink-0 py-2 overflow-y-auto macos-scrollbar",
+                className: "w-full md:w-44 shrink-0 py-2 overflow-x-auto overflow-y-hidden md:overflow-y-auto md:overflow-x-hidden macos-scrollbar border-b md:border-b-0 md:border-r border-black/10 flex md:flex-col",
                 style: {
-                    backgroundColor: "var(--color-macos-sidebar)",
-                    borderRight: "1px solid rgba(0,0,0,0.1)"
+                    backgroundColor: "var(--color-macos-sidebar)"
                 },
-                children: sidebarItems.map((item)=>{
-                    if (item.type === "header") {
-                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "px-4 py-1.5 text-[10px] font-semibold text-gray-500 uppercase tracking-wide",
-                            children: item.label
-                        }, item.id, false, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex md:flex-col px-2 md:px-0",
+                    children: sidebarItems.map((item)=>{
+                        if (item.type === "header") {
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "px-2 md:px-4 py-1.5 text-[10px] font-semibold text-gray-500 uppercase tracking-wide whitespace-nowrap",
+                                children: item.label
+                            }, item.id, false, {
+                                fileName: "[project]/components/macos/apps/finder-app.tsx",
+                                lineNumber: 83,
+                                columnNumber: 17
+                            }, this);
+                        }
+                        const Icon = item.icon;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "w-full px-2 md:px-4 py-1 flex items-center gap-2 text-xs hover:bg-black/5 rounded-md whitespace-nowrap",
+                            onClick: ()=>setCurrentPath(item.label),
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                                    className: "w-4 h-4 text-blue-500 flex-shrink-0"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/macos/apps/finder-app.tsx",
+                                    lineNumber: 98,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "hidden md:inline",
+                                    children: item.label
+                                }, void 0, false, {
+                                    fileName: "[project]/components/macos/apps/finder-app.tsx",
+                                    lineNumber: 99,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, item.id, true, {
                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                            lineNumber: 82,
+                            lineNumber: 93,
                             columnNumber: 15
                         }, this);
-                    }
-                    const Icon = item.icon;
-                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "w-full px-4 py-1 flex items-center gap-2 text-xs hover:bg-black/5",
-                        onClick: ()=>setCurrentPath(item.label),
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                className: "w-4 h-4 text-blue-500"
-                            }, void 0, false, {
-                                fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 97,
-                                columnNumber: 15
-                            }, this),
-                            item.label
-                        ]
-                    }, item.id, true, {
-                        fileName: "[project]/components/macos/apps/finder-app.tsx",
-                        lineNumber: 92,
-                        columnNumber: 13
-                    }, this);
-                })
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/components/macos/apps/finder-app.tsx",
+                    lineNumber: 79,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/components/macos/apps/finder-app.tsx",
                 lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex-1 flex flex-col",
+                className: "flex-1 flex flex-col bg-white overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "h-10 flex items-center justify-between px-3 border-b border-black/10 bg-white",
+                        className: "h-10 flex items-center justify-between px-3 border-b border-black/10 bg-white flex-shrink-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center gap-1",
@@ -2693,12 +2738,12 @@ function FinderApp({ windowId }) {
                                             className: "w-4 h-4 text-gray-400"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 112,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2707,12 +2752,12 @@ function FinderApp({ windowId }) {
                                             className: "w-4 h-4 text-gray-400"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 115,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2720,13 +2765,13 @@ function FinderApp({ windowId }) {
                                         children: currentPath
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 117,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 108,
+                                lineNumber: 110,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2739,12 +2784,12 @@ function FinderApp({ windowId }) {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 124,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 120,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2754,12 +2799,12 @@ function FinderApp({ windowId }) {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 126,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2769,28 +2814,28 @@ function FinderApp({ windowId }) {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 117,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                        lineNumber: 107,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1 overflow-auto p-2 bg-white",
+                        className: "flex-1 overflow-auto p-2",
                         children: [
                             viewMode === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
                                 className: "w-full text-xs",
@@ -2804,26 +2849,26 @@ function FinderApp({ windowId }) {
                                                     children: "Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 147,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                    className: "pb-2 font-medium",
+                                                    className: "pb-2 font-medium hidden sm:table-cell",
                                                     children: "Date Modified"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 148,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 146,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 145,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2840,44 +2885,44 @@ function FinderApp({ windowId }) {
                                                                 className: `w-4 h-4 ${selectedItem === file.id ? "text-white" : file.type === "folder" ? "text-blue-500" : "text-gray-400"}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                                lineNumber: 159,
+                                                                lineNumber: 161,
                                                                 columnNumber: 25
                                                             }, this),
                                                             file.name
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                        lineNumber: 158,
+                                                        lineNumber: 160,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                        className: "py-1.5",
+                                                        className: "py-1.5 hidden sm:table-cell",
                                                         children: file.modified
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                        lineNumber: 164,
+                                                        lineNumber: 166,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, file.id, true, {
                                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 155,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 151,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 142,
+                                lineNumber: 144,
                                 columnNumber: 13
                             }, this),
                             viewMode === "grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-4 gap-4 p-2",
+                                className: "grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 p-2",
                                 children: files.map((file)=>{
                                     const Icon = getFileIcon(file.type);
                                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2888,7 +2933,7 @@ function FinderApp({ windowId }) {
                                                 className: `w-12 h-12 ${selectedItem === file.id ? "text-white" : file.type === "folder" ? "text-blue-500" : "text-gray-400"}`
                                             }, void 0, false, {
                                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 183,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2896,29 +2941,29 @@ function FinderApp({ windowId }) {
                                                 children: file.name
                                             }, void 0, false, {
                                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 186,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, file.id, true, {
                                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 178,
                                         columnNumber: 19
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 172,
+                                lineNumber: 174,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                        lineNumber: 140,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "h-6 px-3 flex items-center justify-between text-[10px] text-gray-500 bg-gray-50 border-t border-gray-200",
+                        className: "h-6 px-3 flex items-center justify-between text-[10px] text-gray-500 bg-gray-50 border-t border-gray-200 flex-shrink-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: [
@@ -2927,26 +2972,27 @@ function FinderApp({ windowId }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 198,
+                                lineNumber: 200,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "hidden sm:inline",
                                 children: "25.4 GB available"
                             }, void 0, false, {
                                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                                lineNumber: 199,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/macos/apps/finder-app.tsx",
-                        lineNumber: 197,
+                        lineNumber: 199,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/apps/finder-app.tsx",
-                lineNumber: 105,
+                lineNumber: 107,
                 columnNumber: 7
             }, this)
         ]
@@ -2997,15 +3043,15 @@ function CalculatorApp({ windowId }) {
         setWaitingForOperand(false);
     };
     const toggleSign = ()=>{
-        const value = Number.parseFloat(display);
+        const value = parseFloat(display);
         setDisplay(String(value * -1));
     };
     const percentage = ()=>{
-        const value = Number.parseFloat(display);
+        const value = parseFloat(display);
         setDisplay(String(value / 100));
     };
     const performOperation = (nextOperation)=>{
-        const inputValue = Number.parseFloat(display);
+        const inputValue = parseFloat(display);
         if (previousValue === null) {
             setPreviousValue(inputValue);
         } else if (operation) {
@@ -3033,7 +3079,7 @@ function CalculatorApp({ windowId }) {
     };
     const calculate = ()=>{
         if (!operation || previousValue === null) return;
-        const inputValue = Number.parseFloat(display);
+        const inputValue = parseFloat(display);
         let result = 0;
         switch(operation){
             case "+":
@@ -3054,31 +3100,38 @@ function CalculatorApp({ windowId }) {
         setOperation(null);
         setWaitingForOperand(true);
     };
-    const Button = ({ children, onClick, className = "", wide = false })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            className: `h-12 rounded-full text-xl font-light flex items-center justify-center active:opacity-70 transition-opacity ${wide ? "col-span-2" : ""} ${className}`,
-            onClick: onClick,
-            children: children
+    const Button = ({ children, onClick, className = "", wide = false })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: `${wide ? "col-span-2" : ""} aspect-w-1 aspect-h-1`,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                className: `w-full h-full rounded-full text-xl md:text-2xl font-light flex items-center justify-center active:opacity-70 transition-opacity ${className}`,
+                onClick: onClick,
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/components/macos/apps/calculator-app.tsx",
+                lineNumber: 105,
+                columnNumber: 7
+            }, this)
         }, void 0, false, {
             fileName: "[project]/components/macos/apps/calculator-app.tsx",
-            lineNumber: 122,
+            lineNumber: 104,
             columnNumber: 5
         }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "h-full flex flex-col bg-black p-2",
+        className: "h-full flex flex-col bg-black p-2 space-y-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex-1 flex items-end justify-end px-4 pb-2",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-white text-5xl font-light truncate",
-                    children: display.length > 9 ? Number.parseFloat(display).toExponential(4) : display
+                    className: "text-white text-5xl md:text-6xl font-light truncate",
+                    children: display.length > 9 ? parseFloat(display).toExponential(4) : display
                 }, void 0, false, {
                     fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                    lineNumber: 134,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                lineNumber: 133,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3090,7 +3143,7 @@ function CalculatorApp({ windowId }) {
                         children: "AC"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 141,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3099,7 +3152,7 @@ function CalculatorApp({ windowId }) {
                         children: "±"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 144,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3108,7 +3161,7 @@ function CalculatorApp({ windowId }) {
                         children: "%"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 147,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3117,7 +3170,7 @@ function CalculatorApp({ windowId }) {
                         children: "÷"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 150,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3126,7 +3179,7 @@ function CalculatorApp({ windowId }) {
                         children: "7"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 154,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3135,7 +3188,7 @@ function CalculatorApp({ windowId }) {
                         children: "8"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 157,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3144,7 +3197,7 @@ function CalculatorApp({ windowId }) {
                         children: "9"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 160,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3153,7 +3206,7 @@ function CalculatorApp({ windowId }) {
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 163,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3162,7 +3215,7 @@ function CalculatorApp({ windowId }) {
                         children: "4"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 167,
+                        lineNumber: 135,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3171,7 +3224,7 @@ function CalculatorApp({ windowId }) {
                         children: "5"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 170,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3180,7 +3233,7 @@ function CalculatorApp({ windowId }) {
                         children: "6"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 173,
+                        lineNumber: 137,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3189,7 +3242,7 @@ function CalculatorApp({ windowId }) {
                         children: "−"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 176,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3198,7 +3251,7 @@ function CalculatorApp({ windowId }) {
                         children: "1"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 180,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3207,7 +3260,7 @@ function CalculatorApp({ windowId }) {
                         children: "2"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 183,
+                        lineNumber: 141,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3216,7 +3269,7 @@ function CalculatorApp({ windowId }) {
                         children: "3"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 186,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3225,17 +3278,17 @@ function CalculatorApp({ windowId }) {
                         children: "+"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 189,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
                         onClick: ()=>inputDigit("0"),
-                        className: "bg-gray-700 text-white pl-6 justify-start",
+                        className: "bg-gray-700 text-white pl-6 md:pl-8 justify-start",
                         wide: true,
                         children: "0"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 193,
+                        lineNumber: 145,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3244,7 +3297,7 @@ function CalculatorApp({ windowId }) {
                         children: "."
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 196,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
@@ -3253,19 +3306,19 @@ function CalculatorApp({ windowId }) {
                         children: "="
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                        lineNumber: 199,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/apps/calculator-app.tsx",
-                lineNumber: 140,
+                lineNumber: 124,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/macos/apps/calculator-app.tsx",
-        lineNumber: 131,
+        lineNumber: 115,
         columnNumber: 5
     }, this);
 }
@@ -4588,58 +4641,72 @@ function SettingsApp({ windowId }) {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex h-full",
+        className: "flex flex-col md:flex-row h-full",
         style: {
             color: "var(--color-macos-text)"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-56 py-2 overflow-y-auto macos-scrollbar border-r border-black/10",
+                className: "w-full md:w-56 py-2 overflow-y-auto md:overflow-y-auto overflow-x-auto macos-scrollbar border-b md:border-b-0 md:border-r border-black/10 flex md:block flex-shrink-0",
                 style: {
                     backgroundColor: "var(--color-macos-sidebar)"
                 },
-                children: settingsSections.map((section)=>{
-                    const Icon = section.icon;
-                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: `w-full px-3 py-1.5 flex items-center gap-3 text-xs ${selectedSection === section.id ? "bg-blue-500 text-white" : "hover:bg-black/5"}`,
-                        onClick: ()=>setSelectedSection(section.id),
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                className: "w-4 h-4"
-                            }, void 0, false, {
-                                fileName: "[project]/components/macos/apps/settings-app.tsx",
-                                lineNumber: 220,
-                                columnNumber: 15
-                            }, this),
-                            section.label
-                        ]
-                    }, section.id, true, {
-                        fileName: "[project]/components/macos/apps/settings-app.tsx",
-                        lineNumber: 213,
-                        columnNumber: 13
-                    }, this);
-                })
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex md:flex-col",
+                    children: settingsSections.map((section)=>{
+                        const Icon = section.icon;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: `flex-shrink-0 px-3 py-1.5 flex items-center gap-3 text-xs ${selectedSection === section.id ? "bg-blue-500 text-white" : "hover:bg-black/5"}`,
+                            onClick: ()=>setSelectedSection(section.id),
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                                    className: "w-4 h-4"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/macos/apps/settings-app.tsx",
+                                    lineNumber: 221,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "hidden md:inline",
+                                    children: section.label
+                                }, void 0, false, {
+                                    fileName: "[project]/components/macos/apps/settings-app.tsx",
+                                    lineNumber: 222,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, section.id, true, {
+                            fileName: "[project]/components/macos/apps/settings-app.tsx",
+                            lineNumber: 214,
+                            columnNumber: 15
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/components/macos/apps/settings-app.tsx",
+                    lineNumber: 210,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/components/macos/apps/settings-app.tsx",
                 lineNumber: 206,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex-1 p-6 bg-white overflow-y-auto",
+                className: "flex-1 p-4 md:p-6 bg-white overflow-y-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-xl font-semibold mb-4",
+                        className: "text-lg md:text-xl font-semibold mb-4",
                         children: settingsSections.find((s)=>s.id === selectedSection)?.label
                     }, void 0, false, {
                         fileName: "[project]/components/macos/apps/settings-app.tsx",
-                        lineNumber: 229,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this),
                     renderContent()
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/apps/settings-app.tsx",
-                lineNumber: 228,
+                lineNumber: 230,
                 columnNumber: 7
             }, this)
         ]
@@ -5236,14 +5303,22 @@ function MacOSDesktop({ machine, onShutdown }) {
             width: 600,
             height: 400
         };
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        // Calculate initial position dynamically, ensuring it's within bounds and responsive
+        const initialX = Math.max(10, (screenWidth - size.width) / 2 + windows.length * 15 % (screenWidth * 0.2));
+        const initialY = Math.max(40, (screenHeight - size.height) / 2 + windows.length * 15 % (screenHeight * 0.2));
+        // Adjust window size for smaller screens if it's too large
+        const responsiveWidth = Math.min(size.width, screenWidth - 20);
+        const responsiveHeight = Math.min(size.height, screenHeight - 100); // Account for menu bar and dock
         const newWindow = {
             id: `${app}-${Date.now()}`,
             app,
             title: app.charAt(0).toUpperCase() + app.slice(1),
-            x: 100 + windows.length * 30 % 200,
-            y: 50 + windows.length * 30 % 150,
-            width: size.width,
-            height: size.height,
+            x: initialX,
+            y: initialY,
+            width: responsiveWidth,
+            height: responsiveHeight,
             minimized: false,
             maximized: false,
             zIndex: maxZIndex + 1
@@ -5322,7 +5397,7 @@ function MacOSDesktop({ machine, onShutdown }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 157,
+                lineNumber: 168,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5333,12 +5408,12 @@ function MacOSDesktop({ machine, onShutdown }) {
                     imageData: imageData
                 }, void 0, false, {
                     fileName: "[project]/components/macos/macos-desktop.tsx",
-                    lineNumber: 171,
+                    lineNumber: 182,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 169,
+                lineNumber: 180,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$menu$2d$bar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MenuBar"], {
@@ -5347,30 +5422,30 @@ function MacOSDesktop({ machine, onShutdown }) {
                 onShutdown: onShutdown
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 180,
+                lineNumber: 191,
                 columnNumber: 7
             }, this),
-            windows.filter((w)=>!w.minimized).map((window)=>{
-                const AppComponent = appComponents[window.app];
+            windows.filter((w)=>!w.minimized).map((window1)=>{
+                const AppComponent = appComponents[window1.app];
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$macos$2f$mac$2d$window$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MacWindow"], {
-                    window: window,
-                    isActive: activeWindowId === window.id,
-                    onClose: ()=>closeWindow(window.id),
-                    onMinimize: ()=>minimizeWindow(window.id),
-                    onMaximize: ()=>maximizeWindow(window.id),
-                    onFocus: ()=>bringToFront(window.id),
-                    onMove: (x, y)=>updateWindowPosition(window.id, x, y),
-                    onResize: (w, h)=>updateWindowSize(window.id, w, h),
+                    window: window1,
+                    isActive: activeWindowId === window1.id,
+                    onClose: ()=>closeWindow(window1.id),
+                    onMinimize: ()=>minimizeWindow(window1.id),
+                    onMaximize: ()=>maximizeWindow(window1.id),
+                    onFocus: ()=>bringToFront(window1.id),
+                    onMove: (x, y)=>updateWindowPosition(window1.id, x, y),
+                    onResize: (w, h)=>updateWindowSize(window1.id, w, h),
                     children: AppComponent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AppComponent, {
-                        windowId: window.id
+                        windowId: window1.id
                     }, void 0, false, {
                         fileName: "[project]/components/macos/macos-desktop.tsx",
-                        lineNumber: 199,
+                        lineNumber: 210,
                         columnNumber: 32
                     }, this)
-                }, window.id, false, {
+                }, window1.id, false, {
                     fileName: "[project]/components/macos/macos-desktop.tsx",
-                    lineNumber: 188,
+                    lineNumber: 199,
                     columnNumber: 13
                 }, this);
             }),
@@ -5389,13 +5464,13 @@ function MacOSDesktop({ machine, onShutdown }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/macos/macos-desktop.tsx",
-                lineNumber: 205,
+                lineNumber: 216,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/macos/macos-desktop.tsx",
-        lineNumber: 150,
+        lineNumber: 161,
         columnNumber: 5
     }, this);
 }
@@ -5460,12 +5535,12 @@ function BootSequence({ machine, onComplete }) {
         onComplete
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex-1 bg-black flex flex-col items-center justify-center",
+        className: "flex-1 bg-black flex flex-col items-center justify-center p-4 sm:p-8 md:p-12",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-8",
+                className: "mb-6 sm:mb-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                    className: "w-20 h-24 text-white",
+                    className: "w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28 text-white",
                     viewBox: "0 0 170 170",
                     fill: "currentColor",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -5486,7 +5561,7 @@ function BootSequence({ machine, onComplete }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-48 h-1 bg-neutral-800 rounded-full overflow-hidden mb-4",
+                className: "w-3/4 max-w-xs h-1 sm:h-1.5 md:h-2 bg-neutral-800 rounded-full overflow-hidden mb-3 sm:mb-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "h-full bg-white rounded-full transition-all duration-100 ease-linear",
                     style: {
@@ -5503,7 +5578,7 @@ function BootSequence({ machine, onComplete }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-neutral-500 text-xs font-mono",
+                className: "text-neutral-500 text-xs sm:text-sm md:text-base font-mono text-center px-4",
                 children: bootMessages[currentMessage]
             }, void 0, false, {
                 fileName: "[project]/components/macos/boot-sequence.tsx",
@@ -5511,7 +5586,7 @@ function BootSequence({ machine, onComplete }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-8 text-neutral-600 text-xs text-center",
+                className: "absolute bottom-4 sm:bottom-8 text-neutral-600 text-xs sm:text-sm md:text-base text-center px-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: [
@@ -5521,20 +5596,20 @@ function BootSequence({ machine, onComplete }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/macos/boot-sequence.tsx",
-                        lineNumber: 84,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: machine.osVersion
                     }, void 0, false, {
                         fileName: "[project]/components/macos/boot-sequence.tsx",
-                        lineNumber: 87,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/macos/boot-sequence.tsx",
-                lineNumber: 83,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
         ]
@@ -5598,7 +5673,7 @@ const MacOSInstaller = ({ machine })=>{
         machine.screenHeight
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col items-center justify-center w-full h-full bg-black text-white relative",
+        className: "flex flex-col items-center justify-center w-full h-full bg-black text-white relative p-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0",
@@ -5617,10 +5692,10 @@ const MacOSInstaller = ({ machine })=>{
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative z-10 text-center",
+                className: "relative z-10 text-center max-w-md w-full",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-4xl font-bold mb-4",
+                        className: "text-2xl sm:text-4xl font-bold mb-2 sm:mb-4",
                         children: "macOS Installer"
                     }, void 0, false, {
                         fileName: "[project]/components/macos/macos-installer.tsx",
@@ -5628,7 +5703,7 @@ const MacOSInstaller = ({ machine })=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-lg mb-8",
+                        className: "text-sm sm:text-lg mb-4 sm:mb-8",
                         children: message
                     }, void 0, false, {
                         fileName: "[project]/components/macos/macos-installer.tsx",
@@ -5636,7 +5711,7 @@ const MacOSInstaller = ({ machine })=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-64 bg-gray-700 rounded-full h-4 overflow-hidden",
+                        className: "w-full bg-gray-700 rounded-full h-2 sm:h-4 overflow-hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "bg-blue-500 h-full transition-all duration-1000 ease-linear",
                             style: {
@@ -5653,7 +5728,7 @@ const MacOSInstaller = ({ machine })=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-2",
+                        className: "mt-2 text-sm sm:text-base",
                         children: [
                             progress,
                             "%"

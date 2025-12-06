@@ -123,7 +123,7 @@ export function MacWindow({
   return (
     <div
       ref={windowRef}
-      className="absolute flex flex-col window-open"
+      className="absolute flex flex-col window-open inset-x-2 top-8 bottom-20 md:left-auto md:top-auto md:right-auto md:bottom-auto"
       style={{
         left: window.x,
         top: window.y,
@@ -147,7 +147,10 @@ export function MacWindow({
       />
       <div className="flex-1 overflow-hidden">{children}</div>
       {/* Resize handle */}
-      <div className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200" />
+      <div
+        className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200 md:block hidden"
+        onMouseDown={handleResizeStart}
+      />
     </div>
   )
 }

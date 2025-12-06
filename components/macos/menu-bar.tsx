@@ -52,7 +52,7 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
       }}
     >
       {/* Left Side - Apple Menu & App Menu */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">
             <Apple className="w-3.5 h-3.5" />
@@ -84,12 +84,12 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <span className="font-semibold">
+        <span className="font-semibold inline">
           {activeApp ? activeApp.charAt(0).toUpperCase() + activeApp.slice(1) : "Finder"}
         </span>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">File</DropdownMenuTrigger>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex">File</DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
             className="min-w-[180px] text-xs"
@@ -114,7 +114,7 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
         </DropdownMenu>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">Edit</DropdownMenuTrigger>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex">Edit</DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
             className="min-w-[180px] text-xs"
@@ -145,7 +145,7 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
         </DropdownMenu>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150">View</DropdownMenuTrigger>
+          <DropdownMenuTrigger className="hover:bg-white/20 px-2 py-0.5 rounded transition-colors duration-150 hidden sm:flex">View</DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
             className="min-w-[180px] text-xs"
@@ -163,18 +163,18 @@ export function MenuBar({ activeApp, machine, onShutdown }: MenuBarProps) {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Go</span>
-        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Window</span>
-        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150">Help</span>
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline">Go</span>
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline">Window</span>
+        <span className="hover:bg-white/20 px-2 py-0.5 rounded cursor-default transition-colors duration-150 hidden md:inline">Help</span>
       </div>
 
       {/* Right Side - Status Icons */}
-      <div className="flex items-center gap-3">
-        <Battery className="w-4 h-4" />
+      <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+        <Battery className="w-3.5 h-3.5" />
         <Wifi className="w-3.5 h-3.5" />
         <Volume2 className="w-3.5 h-3.5" />
-        <Search className="w-3.5 h-3.5" />
-        <span>{formatDate(currentTime)}</span>
+        <Search className="w-3 h-3 md:w-3.5 md:h-3.5 hidden sm:block" />
+        <span className="hidden md:inline">{formatDate(currentTime)}</span>
         <span className="font-medium">{formatTime(currentTime)}</span>
       </div>
     </div>

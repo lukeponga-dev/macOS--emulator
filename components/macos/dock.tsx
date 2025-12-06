@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   FolderOpen,
   Calculator,
@@ -37,14 +37,42 @@ const dockApps = [
 
 export function Dock({ openApp, windows, onWindowClick }: DockProps) {
   const [hoveredApp, setHoveredApp] = useState<string | null>(null)
+  const [iconSize, setIconSize] = useState(56) // Default large size
+
+  useEffect(() => {
+    const calculateIconSize = () => {
+      const numApps = dockApps.length
+      const maxDockWidth = window.innerWidth * 0.8; // 80% of window width
+      const baseIconSize = 56; // Corresponds to w-14
+      const minIconSize = 40; // Corresponds to w-10
+      
+      let newSize = baseIconSize;
+      if (numApps > 10) {
+        newSize = Math.max(minIconSize, baseIconSize - (numApps - 10) * 2);
+      }
+      
+      // Further constrain if dock exceeds max width
+      const currentTotalWidth = numApps * (newSize + 12); // Assuming gap of 12px (sm:gap-2)
+      if (currentTotalWidth > maxDockWidth) {
+          const scaleFactor = maxDockWidth / currentTotalWidth;
+          newSize = Math.floor(newSize * scaleFactor);
+      }
+
+      setIconSize(Math.max(minIconSize, newSize));
+    }
+
+    calculateIconSize();
+    window.addEventListener('resize', calculateIconSize);
+    return () => window.removeEventListener('resize', calculateIconSize);
+  }, []);
 
   const isAppOpen = (appId: string) => windows.some((w) => w.app === appId)
 
   return (
     <TooltipProvider delayDuration={0}>
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-full px-2 sm:w-auto sm:px-0">
         <div
-          className="flex items-end gap-1 px-3 py-2 rounded-2xl transition-all duration-200 ease-out"
+          className="flex items-end gap-1 sm:gap-2 px-3 py-2 rounded-2xl transition-all duration-200 ease-out justify-center"
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.1)",
             backdropFilter: "blur(30px) saturate(180%)",
@@ -77,18 +105,20 @@ export function Dock({ openApp, windows, onWindowClick }: DockProps) {
                     }}
                   >
                     <div
-                      className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out"
+                      className="rounded-xl flex items-center justify-center shadow-lg transition-all duration-200 ease-out"
                       style={{
+                        width: `${iconSize}px`,
+                        height: `${iconSize}px`,
                         backgroundColor: app.color,
                         boxShadow: isHovered ? "0 12px 25px rgba(0,0,0,0.4)" : "0 5px 15px rgba(0,0,0,0.2)",
                         transform: isHovered ? "scale(1.05)" : "scale(1)",
                       }}
                     >
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon style={{ width: `${iconSize * 0.6}px`, height: `${iconSize * 0.6}px` }} className="text-white" />
                     </div>
                     {/* Running indicator */}
                     {isOpen && (
-                      <div className="absolute bottom-0 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200" />
+                      <div className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200" />
                     )}
                   </button>
                 </TooltipTrigger>
