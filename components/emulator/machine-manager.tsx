@@ -155,7 +155,7 @@ export function MachineManager({ machines, onStartMachine, onCreateMachine, onDe
           </div>
         </header>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {machines.map((machine) => {
             const IconComponent = modelIcons[machine.model] || Monitor;
             return (
@@ -163,7 +163,7 @@ export function MachineManager({ machines, onStartMachine, onCreateMachine, onDe
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <IconComponent className="w-6 h-6 text-primary" />
+                      <IconComponent className="w-8 h-8 text-primary" />
                       <div>
                         <CardTitle className="text-lg font-semibold leading-tight">{machine.name}</CardTitle>
                         <CardDescription className="text-sm mt-0.5">{machine.model}</CardDescription>
@@ -171,7 +171,7 @@ export function MachineManager({ machines, onStartMachine, onCreateMachine, onDe
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="flex-grow text-sm text-muted-foreground space-y-2">
+                <CardContent className="flex-grow text-sm text-muted-foreground space-y-2.5">
                   <p className="flex items-center gap-2"><span className="font-medium text-foreground w-16">OS:</span> {machine.osVersion}</p>
                   <p className="flex items-center gap-2"><span className="font-medium text-foreground w-16">CPU:</span> {machine.cpu}</p>
                   <p className="flex items-center gap-2"><span className="font-medium text-foreground w-16">RAM:</span> {machine.ram}GB</p>
