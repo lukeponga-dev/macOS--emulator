@@ -1,66 +1,90 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-/* A more modern, clean, and visually appealing color palette */
+/* Updated theme for Mac emulator - dark mode control panel with macOS-specific colors */
 :root {
-  --background: oklch(0.95 0.01 240); /* soft gray */
-  --foreground: oklch(0.05 0.01 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.05 0.01 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.05 0.01 240);
-  --primary: oklch(0.7 0.15 180); /* teal */
-  --primary-foreground: oklch(0.98 0.01 240);
-  --secondary: oklch(0.94 0.02 240);
-  --secondary-foreground: oklch(0.05 0.01 240);
-  --muted: oklch(0.94 0.02 240);
-  --muted-foreground: oklch(0.4 0.01 240);
-  --accent: oklch(0.7 0.15 180); /* teal */
-  --accent-foreground: oklch(0.05 0.01 240);
-  --destructive: oklch(0.5 0.2 15); /* red */
-  --destructive-foreground: oklch(0.98 0.01 240);
-  --warning: oklch(0.7 0.2 50); /* amber */
-  --warning-foreground: oklch(0.05 0.01 240);
-  --success: oklch(0.7 0.2 120); /* green */
-  --success-foreground: oklch(0.98 0.01 240);
-  --border: oklch(0.9 0.02 240);
-  --input: oklch(0.9 0.02 240);
-  --ring: oklch(0.7 0.15 180);
-  --chart-1: oklch(0.7 0.2 50);
-  --chart-2: oklch(0.7 0.2 180);
-  --chart-3: oklch(0.7 0.2 280);
-  --chart-4: oklch(0.7 0.2 120);
-  --chart-5: oklch(0.7 0.2 20);
-  --radius: 0.75rem; /* increased border radius for more rounded cards */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.178 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.178 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.623 0.214 259.815);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.205 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.205 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.623 0.214 259.815);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.623 0.214 259.815);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.178 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.623 0.214 259.815);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
+
+  /* macOS specific colors */
+  --macos-bg: #f5f5f7;
+  --macos-dock: rgba(255, 255, 255, 0.7);
+  --macos-menubar: rgba(255, 255, 255, 0.8);
+  --macos-window: #ffffff;
+  --macos-sidebar: #f0f0f0;
+  --macos-text: #1d1d1f;
+  --macos-text-secondary: #86868b;
+  --macos-red: #ff5f57;
+  --macos-yellow: #febc2e;
+  --macos-green: #28c840;
 }
 
 .dark {
-  --background: oklch(0.2 0.05 250); /* deep navy */
-  --foreground: oklch(0.98 0.01 240);
-  --card: oklch(0.25 0.05 250);
-  --card-foreground: oklch(0.98 0.01 240);
-  --popover: oklch(0.25 0.05 250);
-  --popover-foreground: oklch(0.98 0.01 240);
-  --primary: oklch(0.7 0.15 180); /* teal */
-  --primary-foreground: oklch(0.05 0.01 240);
-  --secondary: oklch(0.2 0.02 240);
-  --secondary-foreground: oklch(0.98 0.01 240);
-  --muted: oklch(0.2 0.02 240);
-  --muted-foreground: oklch(0.6 0.01 240);
-  --accent: oklch(0.7 0.15 180); /* teal */
-  --accent-foreground: oklch(0.98 0.01 240);
-  --destructive: oklch(0.6 0.2 15); /* red */
-  --destructive-foreground: oklch(0.98 0.01 240);
-  --warning: oklch(0.8 0.2 50); /* amber */
-  --warning-foreground: oklch(0.05 0.01 240);
-  --success: oklch(0.7 0.2 120); /* green */
-  --success-foreground: oklch(0.05 0.01 240);
-  --border: oklch(0.3 0.05 250);
-  --input: oklch(0.3 0.05 250);
-  --ring: oklch(0.7 0.15 180);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.178 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.178 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.623 0.214 259.815);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.623 0.214 259.815);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
@@ -93,6 +117,27 @@
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* macOS colors mapped to theme */
+  --color-macos-bg: var(--macos-bg);
+  --color-macos-dock: var(--macos-dock);
+  --color-macos-menubar: var(--macos-menubar);
+  --color-macos-window: var(--macos-window);
+  --color-macos-sidebar: var(--macos-sidebar);
+  --color-macos-text: var(--macos-text);
+  --color-macos-text-secondary: var(--macos-text-secondary);
+  --color-macos-red: var(--macos-red);
+  --color-macos-yellow: var(--macos-yellow);
+  --color-macos-green: var(--macos-green);
 }
 
 @layer base {
@@ -101,9 +146,52 @@
   }
   body {
     @apply bg-background text-foreground;
-    min-height: 100vh;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+}
+
+/* Added macOS-specific animations and scrollbar styles */
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dockBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.window-open {
+  animation: windowOpen 0.2s ease-out;
+}
+
+.dock-bounce {
+  animation: dockBounce 0.5s ease-in-out 3;
+}
+
+.macos-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.macos-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.macos-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.macos-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
 }

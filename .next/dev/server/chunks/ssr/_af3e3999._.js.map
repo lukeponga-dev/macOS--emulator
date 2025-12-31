@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/macOS--emulator/lib/utils.ts"],"sourcesContent":["import { clsx, type ClassValue } from 'clsx'\nimport { twMerge } from 'tailwind-merge'\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEO,SAAS,GAAG,GAAG,MAAoB;IACxC,OAAO,IAAA,sKAAO,EAAC,IAAA,6IAAI,EAAC;AACtB"}},
-    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file:///home/user/macOS--emulator/app/docs/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { MacEmulatorDocs } from \"@/components/mac-emulator-docs\";\n\nexport default function DocsPage() {\n  return (\n    <MacEmulatorDocs />\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,8OAAC,yJAAe;;;;;AAEpB"}}]
-}

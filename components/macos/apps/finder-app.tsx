@@ -70,43 +70,41 @@ export function FinderApp({ windowId }: FinderAppProps) {
   const [currentPath, setCurrentPath] = useState("Home")
 
   return (
-    <div className="flex flex-col md:flex-row h-full" style={{ color: "var(--color-macos-text)" }}>
+    <div className="flex h-full" style={{ color: "var(--color-macos-text)" }}>
       {/* Sidebar */}
       <div
-        className="w-full md:w-44 shrink-0 py-2 overflow-x-auto overflow-y-hidden md:overflow-y-auto md:overflow-x-hidden macos-scrollbar border-b md:border-b-0 md:border-r border-black/10 flex md:flex-col"
-        style={{ backgroundColor: "var(--color-macos-sidebar)" }}
+        className="w-44 shrink-0 py-2 overflow-y-auto macos-scrollbar"
+        style={{ backgroundColor: "var(--color-macos-sidebar)", borderRight: "1px solid rgba(0,0,0,0.1)" }}
       >
-        <div className="flex md:flex-col px-2 md:px-0">
-          {sidebarItems.map((item) => {
-            if (item.type === "header") {
-              return (
-                <div
-                  key={item.id}
-                  className="px-2 md:px-4 py-1.5 text-[10px] font-semibold text-gray-500 uppercase tracking-wide whitespace-nowrap"
-                >
-                  {item.label}
-                </div>
-              )
-            }
-            const Icon = item.icon!
+        {sidebarItems.map((item) => {
+          if (item.type === "header") {
             return (
-              <button
+              <div
                 key={item.id}
-                className="w-full px-2 md:px-4 py-1 flex items-center gap-2 text-xs hover:bg-black/5 rounded-md whitespace-nowrap"
-                onClick={() => setCurrentPath(item.label)}
+                className="px-4 py-1.5 text-[10px] font-semibold text-gray-500 uppercase tracking-wide"
               >
-                <Icon className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                <span className="hidden md:inline">{item.label}</span>
-              </button>
+                {item.label}
+              </div>
             )
-          })}
-        </div>
+          }
+          const Icon = item.icon!
+          return (
+            <button
+              key={item.id}
+              className="w-full px-4 py-1 flex items-center gap-2 text-xs hover:bg-black/5"
+              onClick={() => setCurrentPath(item.label)}
+            >
+              <Icon className="w-4 h-4 text-blue-500" />
+              {item.label}
+            </button>
+          )
+        })}
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col bg-white overflow-hidden">
+      <div className="flex-1 flex flex-col">
         {/* Toolbar */}
-        <div className="h-10 flex items-center justify-between px-3 border-b border-black/10 bg-white flex-shrink-0">
+        <div className="h-10 flex items-center justify-between px-3 border-b border-black/10 bg-white">
           <div className="flex items-center gap-1">
             <button className="p-1 hover:bg-black/5 rounded">
               <ChevronLeft className="w-4 h-4 text-gray-400" />
@@ -139,13 +137,13 @@ export function FinderApp({ windowId }: FinderAppProps) {
         </div>
 
         {/* File List */}
-        <div className="flex-1 overflow-auto p-2">
+        <div className="flex-1 overflow-auto p-2 bg-white">
           {viewMode === "list" && (
             <table className="w-full text-xs">
               <thead>
                 <tr className="text-left text-gray-500 border-b border-gray-200">
                   <th className="pb-2 font-medium">Name</th>
-                  <th className="pb-2 font-medium hidden sm:table-cell">Date Modified</th>
+                  <th className="pb-2 font-medium">Date Modified</th>
                 </tr>
               </thead>
               <tbody>
@@ -163,7 +161,7 @@ export function FinderApp({ windowId }: FinderAppProps) {
                         />
                         {file.name}
                       </td>
-                      <td className="py-1.5 hidden sm:table-cell">{file.modified}</td>
+                      <td className="py-1.5">{file.modified}</td>
                     </tr>
                   )
                 })}
@@ -171,7 +169,7 @@ export function FinderApp({ windowId }: FinderAppProps) {
             </table>
           )}
           {viewMode === "grid" && (
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 p-2">
+            <div className="grid grid-cols-4 gap-4 p-2">
               {files.map((file) => {
                 const Icon = getFileIcon(file.type)
                 return (
@@ -196,9 +194,9 @@ export function FinderApp({ windowId }: FinderAppProps) {
         </div>
 
         {/* Status Bar */}
-        <div className="h-6 px-3 flex items-center justify-between text-[10px] text-gray-500 bg-gray-50 border-t border-gray-200 flex-shrink-0">
+        <div className="h-6 px-3 flex items-center justify-between text-[10px] text-gray-500 bg-gray-50 border-t border-gray-200">
           <span>{files.length} items</span>
-          <span className="hidden sm:inline">25.4 GB available</span>
+          <span>25.4 GB available</span>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 "use client"
 
 import type React from "react"
+
 import { type ReactNode, useRef, useState, useEffect } from "react"
 import type { AppWindow } from "./macos-desktop"
-import { WindowHeader } from "./window-header"
 
 interface MacWindowProps {
   window: AppWindow
@@ -88,10 +88,6 @@ export function MacWindow({
     }
   }, [isDragging, isResizing, dragOffset, resizeStart, onMove, onResize])
 
-  const shadowStyle = isActive
-    ? "0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05)"
-    : "0 8px 20px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.03)"
-
   if (window.maximized) {
     return (
       <div
@@ -101,7 +97,6 @@ export function MacWindow({
           zIndex: window.zIndex,
           backgroundColor: "var(--color-macos-window)",
           borderRadius: 0,
-          boxShadow: shadowStyle,
         }}
         onClick={onFocus}
       >
@@ -123,7 +118,7 @@ export function MacWindow({
   return (
     <div
       ref={windowRef}
-      className="absolute flex flex-col window-open inset-x-2 top-8 bottom-20 md:left-auto md:top-auto md:right-auto md:bottom-auto"
+      className="absolute flex flex-col window-open"
       style={{
         left: window.x,
         top: window.y,
@@ -131,8 +126,10 @@ export function MacWindow({
         height: window.height,
         zIndex: window.zIndex,
         backgroundColor: "var(--color-macos-window)",
-        borderRadius: "8px",
-        boxShadow: shadowStyle,
+        borderRadius: "10px",
+        boxShadow: isActive
+          ? "0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0,0,0,0.1)"
+          : "0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1)",
         overflow: "hidden",
       }}
       onClick={onFocus}
@@ -147,10 +144,72 @@ export function MacWindow({
       />
       <div className="flex-1 overflow-hidden">{children}</div>
       {/* Resize handle */}
+      <div className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize" onMouseDown={handleResizeStart} />
+    </div>
+  )
+}
+
+interface WindowHeaderProps {
+  title: string
+  isActive: boolean
+  onClose: () => void
+  onMinimize: () => void
+  onMaximize: () => void
+  onMouseDown: (e: React.MouseEvent) => void
+}
+
+function WindowHeader({ title, isActive, onClose, onMinimize, onMaximize, onMouseDown }: WindowHeaderProps) {
+  const [hoveredControl, setHoveredControl] = useState(false)
+
+  return (
+    <div
+      className="h-7 flex items-center px-3 cursor-default select-none shrink-0"
+      style={{
+        backgroundColor: isActive ? "#f6f6f6" : "#e8e8e8",
+        borderBottom: "1px solid rgba(0,0,0,0.1)",
+      }}
+      onMouseDown={onMouseDown}
+    >
       <div
-        className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize opacity-0 hover:opacity-100 transition-opacity duration-200 md:block hidden"
-        onMouseDown={handleResizeStart}
-      />
+        className="window-controls flex items-center gap-2"
+        onMouseEnter={() => setHoveredControl(true)}
+        onMouseLeave={() => setHoveredControl(false)}
+      >
+        <button
+          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
+          style={{ backgroundColor: "var(--color-macos-red)" }}
+          onClick={(e) => {
+            e.stopPropagation()
+            onClose()
+          }}
+        >
+          {hoveredControl && <span className="text-red-900 font-bold">×</span>}
+        </button>
+        <button
+          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
+          style={{ backgroundColor: "var(--color-macos-yellow)" }}
+          onClick={(e) => {
+            e.stopPropagation()
+            onMinimize()
+          }}
+        >
+          {hoveredControl && <span className="text-yellow-900 font-bold">−</span>}
+        </button>
+        <button
+          className="w-3 h-3 rounded-full flex items-center justify-center text-[8px]"
+          style={{ backgroundColor: "var(--color-macos-green)" }}
+          onClick={(e) => {
+            e.stopPropagation()
+            onMaximize()
+          }}
+        >
+          {hoveredControl && <span className="text-green-900 font-bold">+</span>}
+        </button>
+      </div>
+      <span className="flex-1 text-center text-xs font-medium" style={{ color: "var(--color-macos-text)" }}>
+        {title}
+      </span>
+      <div className="w-14" /> {/* Spacer for centering */}
     </div>
   )
 }

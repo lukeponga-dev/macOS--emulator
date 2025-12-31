@@ -5,8 +5,19 @@ import { EmulatorShell } from "./emulator/emulator-shell"
 import { MachineManager } from "./emulator/machine-manager"
 import { MacOSDesktop } from "./macos/macos-desktop"
 import { BootSequence } from "./macos/boot-sequence"
-import { MacOSInstaller } from "./macos/macos-installer"
-import { EmulatorState, VirtualMachine, NVMeController, BootMedia } from "../types/emulator"
+
+export type EmulatorState = "manager" | "booting" | "running"
+
+export interface VirtualMachine {
+  id: string
+  name: string
+  model: string
+  osVersion: string
+  cpu: string
+  ram: number
+  storage: number
+  status: "stopped" | "running" | "suspended"
+}
 
 const defaultMachines: VirtualMachine[] = [
   {
@@ -16,21 +27,8 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 14.0",
     cpu: "Apple M3 Pro",
     ram: 16,
-    storage: 0,
-    nvmeControllers: [
-      {
-        id: "nvme-1-1",
-        name: "Internal NVMe Drive",
-        sizeGb: 512,
-      },
-    ],
-    screenWidth: 1440,
-    screenHeight: 900,
+    storage: 512,
     status: "stopped",
-    bootMedia: "os",
-    jitEnabled: true,
-    mmuEnabled: true,
-    mmuMode: "paged",
   },
   {
     id: "2",
@@ -39,21 +37,8 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 13.0",
     cpu: "Apple M1",
     ram: 8,
-    storage: 0,
-    nvmeControllers: [
-      {
-        id: "nvme-2-1",
-        name: "Internal NVMe Drive",
-        sizeGb: 256,
-      },
-    ],
-    screenWidth: 1920,
-    screenHeight: 1080,
+    storage: 256,
     status: "stopped",
-    bootMedia: "os",
-    jitEnabled: true,
-    mmuEnabled: true,
-    mmuMode: "paged",
   },
   {
     id: "3",
@@ -62,49 +47,8 @@ const defaultMachines: VirtualMachine[] = [
     osVersion: "macOS 12.0",
     cpu: "Intel Core i7",
     ram: 32,
-    storage: 0,
-    nvmeControllers: [
-      {
-        id: "nvme-3-1",
-        name: "Primary NVMe",
-        sizeGb: 1000,
-      },
-      {
-        id: "nvme-3-2",
-        name: "Secondary NVMe",
-        sizeGb: 250,
-      },
-    ],
-    screenWidth: 1280,
-    screenHeight: 800,
+    storage: 1024,
     status: "stopped",
-    bootMedia: "installer",
-    jitEnabled: false,
-    mmuEnabled: true,
-    mmuMode: "flat",
-  },
-  {
-    id: "4",
-    name: "macOS Installer",
-    model: "VirtualMac",
-    osVersion: "macOS 12.0",
-    cpu: "Generic x86",
-    ram: 4,
-    storage: 0,
-    nvmeControllers: [
-      {
-        id: "nvme-4-1",
-        name: "Boot Drive",
-        sizeGb: 64,
-      },
-    ],
-    screenWidth: 1024,
-    screenHeight: 768,
-    status: "stopped",
-    bootMedia: "installer",
-    jitEnabled: true,
-    mmuEnabled: true,
-    mmuMode: "paged",
   },
 ]
 
@@ -131,29 +75,11 @@ export function MacEmulator() {
     setState("manager")
   }
 
-  const handleCreateMachine = (
-    machine: Omit<VirtualMachine, "id" | "status" | "storage" | "nvmeControllers" | "screenWidth" | "screenHeight" | "bootMedia" | "jitEnabled" | "mmuEnabled" | "mmuMode"> & {
-      nvmeControllers?: NVMeController[];
-      screenWidth?: number;
-      screenHeight?: number;
-      bootMedia?: BootMedia;
-      jitEnabled?: boolean;
-      mmuEnabled?: boolean;
-      mmuMode?: "flat" | "paged";
-    }
-  ) => {
+  const handleCreateMachine = (machine: Omit<VirtualMachine, "id" | "status">) => {
     const newMachine: VirtualMachine = {
       ...machine,
       id: Date.now().toString(),
       status: "stopped",
-      storage: 0,
-      nvmeControllers: machine.nvmeControllers || [],
-      screenWidth: machine.screenWidth || 1024,
-      screenHeight: machine.screenHeight || 768,
-      bootMedia: machine.bootMedia || "os",
-      jitEnabled: machine.jitEnabled ?? true,
-      mmuEnabled: machine.mmuEnabled ?? true,
-      mmuMode: machine.mmuMode || "paged",
     }
     setMachines((prev) => [...prev, newMachine])
   }
@@ -173,13 +99,7 @@ export function MacEmulator() {
         />
       )}
       {state === "booting" && activeMachine && <BootSequence machine={activeMachine} onComplete={handleBootComplete} />}
-      {state === "running" && activeMachine && (
-        activeMachine.bootMedia === "installer" ? (
-          <MacOSInstaller machine={activeMachine} />
-        ) : (
-          <MacOSDesktop machine={activeMachine} onShutdown={handleShutdown} />
-        )
-      )}
+      {state === "running" && activeMachine && <MacOSDesktop machine={activeMachine} onShutdown={handleShutdown} />}
     </EmulatorShell>
   )
 }

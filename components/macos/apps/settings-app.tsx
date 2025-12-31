@@ -201,34 +201,32 @@ export function SettingsApp({ windowId }: SettingsAppProps) {
   }
 
   return (
-    <div className="flex flex-col md:flex-row h-full" style={{ color: "var(--color-macos-text)" }}>
+    <div className="flex h-full" style={{ color: "var(--color-macos-text)" }}>
       {/* Sidebar */}
       <div
-        className="w-full md:w-56 py-2 overflow-y-auto md:overflow-y-auto overflow-x-auto macos-scrollbar border-b md:border-b-0 md:border-r border-black/10 flex md:block flex-shrink-0"
+        className="w-56 py-2 overflow-y-auto macos-scrollbar border-r border-black/10"
         style={{ backgroundColor: "var(--color-macos-sidebar)" }}
       >
-        <div className="flex md:flex-col">
-          {settingsSections.map((section) => {
-            const Icon = section.icon
-            return (
-              <button
-                key={section.id}
-                className={`flex-shrink-0 px-3 py-1.5 flex items-center gap-3 text-xs ${
-                  selectedSection === section.id ? "bg-blue-500 text-white" : "hover:bg-black/5"
-                }`}
-                onClick={() => setSelectedSection(section.id)}
-              >
-                <Icon className="w-4 h-4" />
-                <span className="hidden md:inline">{section.label}</span>
-              </button>
-            )
-          })}
-        </div>
+        {settingsSections.map((section) => {
+          const Icon = section.icon
+          return (
+            <button
+              key={section.id}
+              className={`w-full px-3 py-1.5 flex items-center gap-3 text-xs ${
+                selectedSection === section.id ? "bg-blue-500 text-white" : "hover:bg-black/5"
+              }`}
+              onClick={() => setSelectedSection(section.id)}
+            >
+              <Icon className="w-4 h-4" />
+              {section.label}
+            </button>
+          )
+        })}
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-4 md:p-6 bg-white overflow-y-auto">
-        <h2 className="text-lg md:text-xl font-semibold mb-4">{settingsSections.find((s) => s.id === selectedSection)?.label}</h2>
+      <div className="flex-1 p-6 bg-white overflow-y-auto">
+        <h2 className="text-xl font-semibold mb-4">{settingsSections.find((s) => s.id === selectedSection)?.label}</h2>
         {renderContent()}
       </div>
     </div>
